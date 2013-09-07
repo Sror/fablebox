@@ -11,9 +11,10 @@ Features
  - Play, pause and stop fables
  - Cache & store fables on iphone
  - Only for Turkish store
- - Mobile ads support
- - Paid fables, app-in purchase support
- - Push notifications for new fables & news
+ - [v2] Mobile ads support
+ - [v2] Paid fables, app-in purchase support
+ - [v2] Push notifications for new fables & news
+ - [v3] iPad support 
 
 
 Development Stack
