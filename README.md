@@ -24,6 +24,7 @@ Development Stack
 - **Client**
  - iOS mobile application (iOS 6+)
  - Xcode, Objective-C
+ - CocoaPods to manage dependencies
  - TestFlight for distributing test application
  - ..
 
