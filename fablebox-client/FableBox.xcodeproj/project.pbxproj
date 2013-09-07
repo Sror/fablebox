@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A95DD38F78014913A8CC0F74 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BAF2436ABF46E89CD30AA7 /* libPods.a */; };
+		A9D05F1A17DB49B20073DA4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1917DB49B20073DA4A /* UIKit.framework */; };
+		A9D05F1C17DB49B20073DA4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1B17DB49B20073DA4A /* Foundation.framework */; };
+		A9D05F1E17DB49B20073DA4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1D17DB49B20073DA4A /* CoreGraphics.framework */; };
+		A9D05F2417DB49B20073DA4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F2217DB49B20073DA4A /* InfoPlist.strings */; };
+		A9D05F2617DB49B20073DA4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F2517DB49B20073DA4A /* main.m */; };
+		A9D05F2A17DB49B20073DA4A /* FBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F2917DB49B20073DA4A /* FBAppDelegate.m */; };
+		A9D05F2C17DB49B20073DA4A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F2B17DB49B20073DA4A /* Default.png */; };
+		A9D05F2E17DB49B20073DA4A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F2D17DB49B20073DA4A /* Default@2x.png */; };
+		A9D05F3017DB49B20073DA4A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F2F17DB49B20073DA4A /* Default-568h@2x.png */; };
+		A9D05F3317DB49B20073DA4A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F3117DB49B20073DA4A /* MainStoryboard.storyboard */; };
+		A9D05F3617DB49B20073DA4A /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F3517DB49B20073DA4A /* FBViewController.m */; };
+		A9D05F3E17DB49B20073DA4A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F3D17DB49B20073DA4A /* SenTestingKit.framework */; };
+		A9D05F3F17DB49B20073DA4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1917DB49B20073DA4A /* UIKit.framework */; };
+		A9D05F4017DB49B20073DA4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1B17DB49B20073DA4A /* Foundation.framework */; };
+		A9D05F4817DB49B20073DA4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F4617DB49B20073DA4A /* InfoPlist.strings */; };
+		A9D05F4B17DB49B20073DA4A /* FableBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F4A17DB49B20073DA4A /* FableBoxTests.m */; };
+		A9D05F6217DB50570073DA4A /* FBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F6117DB50570073DA4A /* FBUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9D05F4117DB49B20073DA4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D05F0E17DB49B20073DA4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D05F1517DB49B20073DA4A;
+			remoteInfo = FableBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9D05F1617DB49B20073DA4A /* FableBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FableBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D05F1917DB49B20073DA4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A9D05F1B17DB49B20073DA4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9D05F1D17DB49B20073DA4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A9D05F2117DB49B20073DA4A /* FableBox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FableBox-Info.plist"; sourceTree = "<group>"; };
+		A9D05F2317DB49B20073DA4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9D05F2517DB49B20073DA4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9D05F2717DB49B20073DA4A /* FableBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FableBox-Prefix.pch"; sourceTree = "<group>"; };
+		A9D05F2817DB49B20073DA4A /* FBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBAppDelegate.h; sourceTree = "<group>"; };
+		A9D05F2917DB49B20073DA4A /* FBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBAppDelegate.m; sourceTree = "<group>"; };
+		A9D05F2B17DB49B20073DA4A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A9D05F2D17DB49B20073DA4A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A9D05F2F17DB49B20073DA4A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A9D05F3217DB49B20073DA4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A9D05F3417DB49B20073DA4A /* FBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBViewController.h; sourceTree = "<group>"; };
+		A9D05F3517DB49B20073DA4A /* FBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBViewController.m; sourceTree = "<group>"; };
+		A9D05F3C17DB49B20073DA4A /* FableBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FableBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D05F3D17DB49B20073DA4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A9D05F4517DB49B20073DA4A /* FableBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FableBoxTests-Info.plist"; sourceTree = "<group>"; };
+		A9D05F4717DB49B20073DA4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9D05F4917DB49B20073DA4A /* FableBoxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FableBoxTests.h; sourceTree = "<group>"; };
+		A9D05F4A17DB49B20073DA4A /* FableBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FableBoxTests.m; sourceTree = "<group>"; };
+		A9D05F5D17DB4FE00073DA4A /* FBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConstants.h; sourceTree = "<group>"; };
+		A9D05F6017DB50570073DA4A /* FBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUtils.h; sourceTree = "<group>"; };
+		A9D05F6117DB50570073DA4A /* FBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUtils.m; sourceTree = "<group>"; };
+		B2BAF2436ABF46E89CD30AA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9D05F1317DB49B20073DA4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D05F1A17DB49B20073DA4A /* UIKit.framework in Frameworks */,
+				A9D05F1C17DB49B20073DA4A /* Foundation.framework in Frameworks */,
+				A9D05F1E17DB49B20073DA4A /* CoreGraphics.framework in Frameworks */,
+				A95DD38F78014913A8CC0F74 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D05F3817DB49B20073DA4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D05F3E17DB49B20073DA4A /* SenTestingKit.framework in Frameworks */,
+				A9D05F3F17DB49B20073DA4A /* UIKit.framework in Frameworks */,
+				A9D05F4017DB49B20073DA4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9D05F0D17DB49B20073DA4A = {
+			isa = PBXGroup;
+			children = (
+				A9D05F1F17DB49B20073DA4A /* FableBox */,
+				A9D05F4317DB49B20073DA4A /* FableBoxTests */,
+				A9D05F1817DB49B20073DA4A /* Frameworks */,
+				A9D05F1717DB49B20073DA4A /* Products */,
+				C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A9D05F1717DB49B20073DA4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F1617DB49B20073DA4A /* FableBox.app */,
+				A9D05F3C17DB49B20073DA4A /* FableBoxTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9D05F1817DB49B20073DA4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F1917DB49B20073DA4A /* UIKit.framework */,
+				A9D05F1B17DB49B20073DA4A /* Foundation.framework */,
+				A9D05F1D17DB49B20073DA4A /* CoreGraphics.framework */,
+				A9D05F3D17DB49B20073DA4A /* SenTestingKit.framework */,
+				B2BAF2436ABF46E89CD30AA7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9D05F1F17DB49B20073DA4A /* FableBox */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F5817DB4F0F0073DA4A /* libs */,
+				A9D05F5917DB4F1D0073DA4A /* utils */,
+				A9D05F3117DB49B20073DA4A /* MainStoryboard.storyboard */,
+				A9D05F5B17DB4F300073DA4A /* model */,
+				A9D05F5A17DB4F2B0073DA4A /* view */,
+				A9D05F5C17DB4F3A0073DA4A /* controller */,
+				A9D05F2817DB49B20073DA4A /* FBAppDelegate.h */,
+				A9D05F2917DB49B20073DA4A /* FBAppDelegate.m */,
+				A9D05F2017DB49B20073DA4A /* Supporting Files */,
+			);
+			path = FableBox;
+			sourceTree = "<group>";
+		};
+		A9D05F2017DB49B20073DA4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F2117DB49B20073DA4A /* FableBox-Info.plist */,
+				A9D05F2217DB49B20073DA4A /* InfoPlist.strings */,
+				A9D05F2517DB49B20073DA4A /* main.m */,
+				A9D05F2717DB49B20073DA4A /* FableBox-Prefix.pch */,
+				A9D05F2B17DB49B20073DA4A /* Default.png */,
+				A9D05F2D17DB49B20073DA4A /* Default@2x.png */,
+				A9D05F2F17DB49B20073DA4A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9D05F4317DB49B20073DA4A /* FableBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F4917DB49B20073DA4A /* FableBoxTests.h */,
+				A9D05F4A17DB49B20073DA4A /* FableBoxTests.m */,
+				A9D05F4417DB49B20073DA4A /* Supporting Files */,
+			);
+			path = FableBoxTests;
+			sourceTree = "<group>";
+		};
+		A9D05F4417DB49B20073DA4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F4517DB49B20073DA4A /* FableBoxTests-Info.plist */,
+				A9D05F4617DB49B20073DA4A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9D05F5817DB4F0F0073DA4A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		A9D05F5917DB4F1D0073DA4A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F5D17DB4FE00073DA4A /* FBConstants.h */,
+				A9D05F6017DB50570073DA4A /* FBUtils.h */,
+				A9D05F6117DB50570073DA4A /* FBUtils.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		A9D05F5A17DB4F2B0073DA4A /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		A9D05F5B17DB4F300073DA4A /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		A9D05F5C17DB4F3A0073DA4A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F3417DB49B20073DA4A /* FBViewController.h */,
+				A9D05F3517DB49B20073DA4A /* FBViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9D05F1517DB49B20073DA4A /* FableBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D05F4E17DB49B20073DA4A /* Build configuration list for PBXNativeTarget "FableBox" */;
+			buildPhases = (
+				C190D040E19B46D387421D29 /* Check Pods Manifest.lock */,
+				A9D05F1217DB49B20073DA4A /* Sources */,
+				A9D05F1317DB49B20073DA4A /* Frameworks */,
+				A9D05F1417DB49B20073DA4A /* Resources */,
+				7614BBD034764F2C9A5E494A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FableBox;
+			productName = FableBox;
+			productReference = A9D05F1617DB49B20073DA4A /* FableBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9D05F3B17DB49B20073DA4A /* FableBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D05F5117DB49B20073DA4A /* Build configuration list for PBXNativeTarget "FableBoxTests" */;
+			buildPhases = (
+				A9D05F3717DB49B20073DA4A /* Sources */,
+				A9D05F3817DB49B20073DA4A /* Frameworks */,
+				A9D05F3917DB49B20073DA4A /* Resources */,
+				A9D05F3A17DB49B20073DA4A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9D05F4217DB49B20073DA4A /* PBXTargetDependency */,
+			);
+			name = FableBoxTests;
+			productName = FableBoxTests;
+			productReference = A9D05F3C17DB49B20073DA4A /* FableBoxTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9D05F0E17DB49B20073DA4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Halil AYYILDIZ";
+			};
+			buildConfigurationList = A9D05F1117DB49B20073DA4A /* Build configuration list for PBXProject "FableBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9D05F0D17DB49B20073DA4A;
+			productRefGroup = A9D05F1717DB49B20073DA4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9D05F1517DB49B20073DA4A /* FableBox */,
+				A9D05F3B17DB49B20073DA4A /* FableBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9D05F1417DB49B20073DA4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D05F2417DB49B20073DA4A /* InfoPlist.strings in Resources */,
+				A9D05F2C17DB49B20073DA4A /* Default.png in Resources */,
+				A9D05F2E17DB49B20073DA4A /* Default@2x.png in Resources */,
+				A9D05F3017DB49B20073DA4A /* Default-568h@2x.png in Resources */,
+				A9D05F3317DB49B20073DA4A /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D05F3917DB49B20073DA4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D05F4817DB49B20073DA4A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7614BBD034764F2C9A5E494A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9D05F3A17DB49B20073DA4A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		C190D040E19B46D387421D29 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9D05F1217DB49B20073DA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D05F2617DB49B20073DA4A /* main.m in Sources */,
+				A9D05F2A17DB49B20073DA4A /* FBAppDelegate.m in Sources */,
+				A9D05F3617DB49B20073DA4A /* FBViewController.m in Sources */,
+				A9D05F6217DB50570073DA4A /* FBUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D05F3717DB49B20073DA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D05F4B17DB49B20073DA4A /* FableBoxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9D05F4217DB49B20073DA4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D05F1517DB49B20073DA4A /* FableBox */;
+			targetProxy = A9D05F4117DB49B20073DA4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9D05F2217DB49B20073DA4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D05F2317DB49B20073DA4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A9D05F3117DB49B20073DA4A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D05F3217DB49B20073DA4A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		A9D05F4617DB49B20073DA4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D05F4717DB49B20073DA4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9D05F4C17DB49B20073DA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9D05F4D17DB49B20073DA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9D05F4F17DB49B20073DA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FableBox/FableBox-Prefix.pch";
+				INFOPLIST_FILE = "FableBox/FableBox-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A9D05F5017DB49B20073DA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FableBox/FableBox-Prefix.pch";
+				INFOPLIST_FILE = "FableBox/FableBox-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A9D05F5217DB49B20073DA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FableBox.app/FableBox";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FableBox/FableBox-Prefix.pch";
+				INFOPLIST_FILE = "FableBoxTests/FableBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A9D05F5317DB49B20073DA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FableBox.app/FableBox";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FableBox/FableBox-Prefix.pch";
+				INFOPLIST_FILE = "FableBoxTests/FableBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9D05F1117DB49B20073DA4A /* Build configuration list for PBXProject "FableBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D05F4C17DB49B20073DA4A /* Debug */,
+				A9D05F4D17DB49B20073DA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D05F4E17DB49B20073DA4A /* Build configuration list for PBXNativeTarget "FableBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D05F4F17DB49B20073DA4A /* Debug */,
+				A9D05F5017DB49B20073DA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D05F5117DB49B20073DA4A /* Build configuration list for PBXNativeTarget "FableBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D05F5217DB49B20073DA4A /* Debug */,
+				A9D05F5317DB49B20073DA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9D05F0E17DB49B20073DA4A /* Project object */;
+}
