@@ -6,16 +6,18 @@ Mobile fable application for children basically plays fables as audio
 
 Features
 -------------------
+- [v1]
  - Basic listing of fables with title and image
  - Play fables (mp3 audio)
  - Play, pause and stop fables
  - Cache & store fables on iphone
  - Only for Turkish store
- - [v2] Mobile ads support
- - [v2] Paid fables, app-in purchase support
- - [v2] Push notifications for new fables & news
- - [v3] iPad support 
-
+- [v2]
+ - Mobile ads support
+ - Paid fables, app-in purchase support
+ - Push notifications for new fables & news
+- [v3]
+ - iPad support (universal app)
 
 Development Stack
 -----------------------
