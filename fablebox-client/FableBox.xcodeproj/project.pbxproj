@@ -42,6 +42,7 @@
 		A9D05F9A17DE63FA0073DA4A /* fb-menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9217DE63FA0073DA4A /* fb-menu-icon@2x.png */; };
 		A9D05F9B17DE63FA0073DA4A /* fb-settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9317DE63FA0073DA4A /* fb-settings-icon.png */; };
 		A9D05F9C17DE63FA0073DA4A /* fb-settings-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */; };
+		A9D05F9F17DE6C7E0073DA4A /* FBDummyFableClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F9E17DE6C7E0073DA4A /* FBDummyFableClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		A9D05F9217DE63FA0073DA4A /* fb-menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-menu-icon@2x.png"; path = "images/fb-menu-icon@2x.png"; sourceTree = "<group>"; };
 		A9D05F9317DE63FA0073DA4A /* fb-settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-settings-icon.png"; path = "images/fb-settings-icon.png"; sourceTree = "<group>"; };
 		A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-settings-icon@2x.png"; path = "images/fb-settings-icon@2x.png"; sourceTree = "<group>"; };
+		A9D05F9D17DE6C7E0073DA4A /* FBDummyFableClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDummyFableClient.h; sourceTree = "<group>"; };
+		A9D05F9E17DE6C7E0073DA4A /* FBDummyFableClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDummyFableClient.m; sourceTree = "<group>"; };
 		B2BAF2436ABF46E89CD30AA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -328,6 +331,8 @@
 				A9D05F8217DE51150073DA4A /* FBFableClient.h */,
 				A9D05F8317DE51150073DA4A /* FBFableClient.m */,
 				A9D05F8517DE512E0073DA4A /* FBFableClientProtocol.h */,
+				A9D05F9D17DE6C7E0073DA4A /* FBDummyFableClient.h */,
+				A9D05F9E17DE6C7E0073DA4A /* FBDummyFableClient.m */,
 			);
 			name = remote;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				A9D05F8017DE4EDE0073DA4A /* FBFableDataProvider.m in Sources */,
 				A9D05F8417DE51150073DA4A /* FBFableClient.m in Sources */,
 				A9D05F8A17DE5F810073DA4A /* FBFablesViewFableCell.m in Sources */,
+				A9D05F9F17DE6C7E0073DA4A /* FBDummyFableClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

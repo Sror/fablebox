@@ -10,6 +10,7 @@
 #import "FBFableDataProvider.h"
 #import "FBFableClientProtocol.h"
 #import "FBFableClient.h"
+#import "FBDummyFableClient.h"
 
 @interface FBFableDataProvider()
 
@@ -25,7 +26,7 @@
     {
         if(self.fableClient == nil)
         {
-            self.fableClient = [[FBFableClient alloc] init];
+            self.fableClient = [[FBDummyFableClient alloc] init];
         }
         return self;
     }
