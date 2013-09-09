@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MFSideMenuContainerViewController.h"
 
 @interface FBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MFSideMenuContainerViewController *container;
 
 @end

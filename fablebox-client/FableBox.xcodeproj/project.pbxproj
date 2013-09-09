@@ -18,13 +18,30 @@
 		A9D05F2E17DB49B20073DA4A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F2D17DB49B20073DA4A /* Default@2x.png */; };
 		A9D05F3017DB49B20073DA4A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F2F17DB49B20073DA4A /* Default-568h@2x.png */; };
 		A9D05F3317DB49B20073DA4A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F3117DB49B20073DA4A /* MainStoryboard.storyboard */; };
-		A9D05F3617DB49B20073DA4A /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F3517DB49B20073DA4A /* FBViewController.m */; };
 		A9D05F3E17DB49B20073DA4A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F3D17DB49B20073DA4A /* SenTestingKit.framework */; };
 		A9D05F3F17DB49B20073DA4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1917DB49B20073DA4A /* UIKit.framework */; };
 		A9D05F4017DB49B20073DA4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05F1B17DB49B20073DA4A /* Foundation.framework */; };
 		A9D05F4817DB49B20073DA4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F4617DB49B20073DA4A /* InfoPlist.strings */; };
 		A9D05F4B17DB49B20073DA4A /* FableBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F4A17DB49B20073DA4A /* FableBoxTests.m */; };
 		A9D05F6217DB50570073DA4A /* FBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F6117DB50570073DA4A /* FBUtils.m */; };
+		A9D05F6517DE44860073DA4A /* FBFable.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F6417DE44860073DA4A /* FBFable.m */; };
+		A9D05F6C17DE47D00073DA4A /* FBSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F6B17DE47D00073DA4A /* FBSideMenuViewController.m */; };
+		A9D05F7017DE48230073DA4A /* FBSideMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F6F17DE48230073DA4A /* FBSideMenuViewCell.m */; };
+		A9D05F7417DE49E00073DA4A /* FBAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F7317DE49E00073DA4A /* FBAboutViewController.m */; };
+		A9D05F7717DE4C360073DA4A /* FBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F7617DE4C360073DA4A /* FBSettingsViewController.m */; };
+		A9D05F7A17DE4DA60073DA4A /* FBFablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F7917DE4DA60073DA4A /* FBFablesViewController.m */; };
+		A9D05F7D17DE4DD20073DA4A /* FBFableDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F7C17DE4DD20073DA4A /* FBFableDetailViewController.m */; };
+		A9D05F8017DE4EDE0073DA4A /* FBFableDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F7F17DE4EDE0073DA4A /* FBFableDataProvider.m */; };
+		A9D05F8417DE51150073DA4A /* FBFableClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F8317DE51150073DA4A /* FBFableClient.m */; };
+		A9D05F8A17DE5F810073DA4A /* FBFablesViewFableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F8917DE5F810073DA4A /* FBFablesViewFableCell.m */; };
+		A9D05F9517DE63FA0073DA4A /* fb-about-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F8D17DE63FA0073DA4A /* fb-about-icon.png */; };
+		A9D05F9617DE63FA0073DA4A /* fb-about-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F8E17DE63FA0073DA4A /* fb-about-icon@2x.png */; };
+		A9D05F9717DE63FA0073DA4A /* fb-fables-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F8F17DE63FA0073DA4A /* fb-fables-icon.png */; };
+		A9D05F9817DE63FA0073DA4A /* fb-fables-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9017DE63FA0073DA4A /* fb-fables-icon@2x.png */; };
+		A9D05F9917DE63FA0073DA4A /* fb-menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9117DE63FA0073DA4A /* fb-menu-icon.png */; };
+		A9D05F9A17DE63FA0073DA4A /* fb-menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9217DE63FA0073DA4A /* fb-menu-icon@2x.png */; };
+		A9D05F9B17DE63FA0073DA4A /* fb-settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9317DE63FA0073DA4A /* fb-settings-icon.png */; };
+		A9D05F9C17DE63FA0073DA4A /* fb-settings-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +69,6 @@
 		A9D05F2D17DB49B20073DA4A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A9D05F2F17DB49B20073DA4A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A9D05F3217DB49B20073DA4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A9D05F3417DB49B20073DA4A /* FBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBViewController.h; sourceTree = "<group>"; };
-		A9D05F3517DB49B20073DA4A /* FBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBViewController.m; sourceTree = "<group>"; };
 		A9D05F3C17DB49B20073DA4A /* FableBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FableBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D05F3D17DB49B20073DA4A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A9D05F4517DB49B20073DA4A /* FableBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FableBoxTests-Info.plist"; sourceTree = "<group>"; };
@@ -63,6 +78,35 @@
 		A9D05F5D17DB4FE00073DA4A /* FBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConstants.h; sourceTree = "<group>"; };
 		A9D05F6017DB50570073DA4A /* FBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUtils.h; sourceTree = "<group>"; };
 		A9D05F6117DB50570073DA4A /* FBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUtils.m; sourceTree = "<group>"; };
+		A9D05F6317DE44860073DA4A /* FBFable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFable.h; sourceTree = "<group>"; };
+		A9D05F6417DE44860073DA4A /* FBFable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFable.m; sourceTree = "<group>"; };
+		A9D05F6A17DE47D00073DA4A /* FBSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSideMenuViewController.h; sourceTree = "<group>"; };
+		A9D05F6B17DE47D00073DA4A /* FBSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSideMenuViewController.m; sourceTree = "<group>"; };
+		A9D05F6E17DE48230073DA4A /* FBSideMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSideMenuViewCell.h; sourceTree = "<group>"; };
+		A9D05F6F17DE48230073DA4A /* FBSideMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSideMenuViewCell.m; sourceTree = "<group>"; };
+		A9D05F7217DE49E00073DA4A /* FBAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBAboutViewController.h; sourceTree = "<group>"; };
+		A9D05F7317DE49E00073DA4A /* FBAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBAboutViewController.m; sourceTree = "<group>"; };
+		A9D05F7517DE4C360073DA4A /* FBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSettingsViewController.h; sourceTree = "<group>"; };
+		A9D05F7617DE4C360073DA4A /* FBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSettingsViewController.m; sourceTree = "<group>"; };
+		A9D05F7817DE4DA60073DA4A /* FBFablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFablesViewController.h; sourceTree = "<group>"; };
+		A9D05F7917DE4DA60073DA4A /* FBFablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFablesViewController.m; sourceTree = "<group>"; };
+		A9D05F7B17DE4DD20073DA4A /* FBFableDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFableDetailViewController.h; sourceTree = "<group>"; };
+		A9D05F7C17DE4DD20073DA4A /* FBFableDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFableDetailViewController.m; sourceTree = "<group>"; };
+		A9D05F7E17DE4EDD0073DA4A /* FBFableDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFableDataProvider.h; sourceTree = "<group>"; };
+		A9D05F7F17DE4EDE0073DA4A /* FBFableDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFableDataProvider.m; sourceTree = "<group>"; };
+		A9D05F8217DE51150073DA4A /* FBFableClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFableClient.h; sourceTree = "<group>"; };
+		A9D05F8317DE51150073DA4A /* FBFableClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFableClient.m; sourceTree = "<group>"; };
+		A9D05F8517DE512E0073DA4A /* FBFableClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFableClientProtocol.h; sourceTree = "<group>"; };
+		A9D05F8817DE5F810073DA4A /* FBFablesViewFableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFablesViewFableCell.h; sourceTree = "<group>"; };
+		A9D05F8917DE5F810073DA4A /* FBFablesViewFableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFablesViewFableCell.m; sourceTree = "<group>"; };
+		A9D05F8D17DE63FA0073DA4A /* fb-about-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-about-icon.png"; path = "images/fb-about-icon.png"; sourceTree = "<group>"; };
+		A9D05F8E17DE63FA0073DA4A /* fb-about-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-about-icon@2x.png"; path = "images/fb-about-icon@2x.png"; sourceTree = "<group>"; };
+		A9D05F8F17DE63FA0073DA4A /* fb-fables-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-fables-icon.png"; path = "images/fb-fables-icon.png"; sourceTree = "<group>"; };
+		A9D05F9017DE63FA0073DA4A /* fb-fables-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-fables-icon@2x.png"; path = "images/fb-fables-icon@2x.png"; sourceTree = "<group>"; };
+		A9D05F9117DE63FA0073DA4A /* fb-menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-menu-icon.png"; path = "images/fb-menu-icon.png"; sourceTree = "<group>"; };
+		A9D05F9217DE63FA0073DA4A /* fb-menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-menu-icon@2x.png"; path = "images/fb-menu-icon@2x.png"; sourceTree = "<group>"; };
+		A9D05F9317DE63FA0073DA4A /* fb-settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-settings-icon.png"; path = "images/fb-settings-icon.png"; sourceTree = "<group>"; };
+		A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-settings-icon@2x.png"; path = "images/fb-settings-icon@2x.png"; sourceTree = "<group>"; };
 		B2BAF2436ABF46E89CD30AA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -127,14 +171,16 @@
 		A9D05F1F17DB49B20073DA4A /* FableBox */ = {
 			isa = PBXGroup;
 			children = (
+				A9D05F3117DB49B20073DA4A /* MainStoryboard.storyboard */,
+				A9D05F2817DB49B20073DA4A /* FBAppDelegate.h */,
+				A9D05F2917DB49B20073DA4A /* FBAppDelegate.m */,
+				A9D05F8117DE50EB0073DA4A /* remote */,
+				A9D05F8B17DE61D80073DA4A /* service */,
 				A9D05F5817DB4F0F0073DA4A /* libs */,
 				A9D05F5917DB4F1D0073DA4A /* utils */,
-				A9D05F3117DB49B20073DA4A /* MainStoryboard.storyboard */,
 				A9D05F5B17DB4F300073DA4A /* model */,
 				A9D05F5A17DB4F2B0073DA4A /* view */,
 				A9D05F5C17DB4F3A0073DA4A /* controller */,
-				A9D05F2817DB49B20073DA4A /* FBAppDelegate.h */,
-				A9D05F2917DB49B20073DA4A /* FBAppDelegate.m */,
 				A9D05F2017DB49B20073DA4A /* Supporting Files */,
 			);
 			path = FableBox;
@@ -143,6 +189,7 @@
 		A9D05F2017DB49B20073DA4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9D05F8C17DE63E00073DA4A /* images */,
 				A9D05F2117DB49B20073DA4A /* FableBox-Info.plist */,
 				A9D05F2217DB49B20073DA4A /* InfoPlist.strings */,
 				A9D05F2517DB49B20073DA4A /* main.m */,
@@ -193,6 +240,8 @@
 		A9D05F5A17DB4F2B0073DA4A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A9D05F7117DE49820073DA4A /* fables */,
+				A9D05F6D17DE48000073DA4A /* sidemenu */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -200,6 +249,8 @@
 		A9D05F5B17DB4F300073DA4A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				A9D05F6317DE44860073DA4A /* FBFable.h */,
+				A9D05F6417DE44860073DA4A /* FBFable.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -207,10 +258,102 @@
 		A9D05F5C17DB4F3A0073DA4A /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				A9D05F3417DB49B20073DA4A /* FBViewController.h */,
-				A9D05F3517DB49B20073DA4A /* FBViewController.m */,
+				A9D05F6917DE477E0073DA4A /* fables */,
+				A9D05F6817DE476D0073DA4A /* about */,
+				A9D05F6717DE47620073DA4A /* settings */,
+				A9D05F6617DE475A0073DA4A /* sidemenu */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		A9D05F6617DE475A0073DA4A /* sidemenu */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F6A17DE47D00073DA4A /* FBSideMenuViewController.h */,
+				A9D05F6B17DE47D00073DA4A /* FBSideMenuViewController.m */,
+			);
+			name = sidemenu;
+			sourceTree = "<group>";
+		};
+		A9D05F6717DE47620073DA4A /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F7517DE4C360073DA4A /* FBSettingsViewController.h */,
+				A9D05F7617DE4C360073DA4A /* FBSettingsViewController.m */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
+		A9D05F6817DE476D0073DA4A /* about */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F7217DE49E00073DA4A /* FBAboutViewController.h */,
+				A9D05F7317DE49E00073DA4A /* FBAboutViewController.m */,
+			);
+			name = about;
+			sourceTree = "<group>";
+		};
+		A9D05F6917DE477E0073DA4A /* fables */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F7817DE4DA60073DA4A /* FBFablesViewController.h */,
+				A9D05F7917DE4DA60073DA4A /* FBFablesViewController.m */,
+				A9D05F7B17DE4DD20073DA4A /* FBFableDetailViewController.h */,
+				A9D05F7C17DE4DD20073DA4A /* FBFableDetailViewController.m */,
+			);
+			name = fables;
+			sourceTree = "<group>";
+		};
+		A9D05F6D17DE48000073DA4A /* sidemenu */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F6E17DE48230073DA4A /* FBSideMenuViewCell.h */,
+				A9D05F6F17DE48230073DA4A /* FBSideMenuViewCell.m */,
+			);
+			name = sidemenu;
+			sourceTree = "<group>";
+		};
+		A9D05F7117DE49820073DA4A /* fables */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F8817DE5F810073DA4A /* FBFablesViewFableCell.h */,
+				A9D05F8917DE5F810073DA4A /* FBFablesViewFableCell.m */,
+			);
+			name = fables;
+			sourceTree = "<group>";
+		};
+		A9D05F8117DE50EB0073DA4A /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F8217DE51150073DA4A /* FBFableClient.h */,
+				A9D05F8317DE51150073DA4A /* FBFableClient.m */,
+				A9D05F8517DE512E0073DA4A /* FBFableClientProtocol.h */,
+			);
+			name = remote;
+			sourceTree = "<group>";
+		};
+		A9D05F8B17DE61D80073DA4A /* service */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F7E17DE4EDD0073DA4A /* FBFableDataProvider.h */,
+				A9D05F7F17DE4EDE0073DA4A /* FBFableDataProvider.m */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		A9D05F8C17DE63E00073DA4A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A9D05F8D17DE63FA0073DA4A /* fb-about-icon.png */,
+				A9D05F8E17DE63FA0073DA4A /* fb-about-icon@2x.png */,
+				A9D05F8F17DE63FA0073DA4A /* fb-fables-icon.png */,
+				A9D05F9017DE63FA0073DA4A /* fb-fables-icon@2x.png */,
+				A9D05F9117DE63FA0073DA4A /* fb-menu-icon.png */,
+				A9D05F9217DE63FA0073DA4A /* fb-menu-icon@2x.png */,
+				A9D05F9317DE63FA0073DA4A /* fb-settings-icon.png */,
+				A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +435,14 @@
 				A9D05F2E17DB49B20073DA4A /* Default@2x.png in Resources */,
 				A9D05F3017DB49B20073DA4A /* Default-568h@2x.png in Resources */,
 				A9D05F3317DB49B20073DA4A /* MainStoryboard.storyboard in Resources */,
+				A9D05F9517DE63FA0073DA4A /* fb-about-icon.png in Resources */,
+				A9D05F9617DE63FA0073DA4A /* fb-about-icon@2x.png in Resources */,
+				A9D05F9717DE63FA0073DA4A /* fb-fables-icon.png in Resources */,
+				A9D05F9817DE63FA0073DA4A /* fb-fables-icon@2x.png in Resources */,
+				A9D05F9917DE63FA0073DA4A /* fb-menu-icon.png in Resources */,
+				A9D05F9A17DE63FA0073DA4A /* fb-menu-icon@2x.png in Resources */,
+				A9D05F9B17DE63FA0073DA4A /* fb-settings-icon.png in Resources */,
+				A9D05F9C17DE63FA0073DA4A /* fb-settings-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,8 +509,17 @@
 			files = (
 				A9D05F2617DB49B20073DA4A /* main.m in Sources */,
 				A9D05F2A17DB49B20073DA4A /* FBAppDelegate.m in Sources */,
-				A9D05F3617DB49B20073DA4A /* FBViewController.m in Sources */,
 				A9D05F6217DB50570073DA4A /* FBUtils.m in Sources */,
+				A9D05F6517DE44860073DA4A /* FBFable.m in Sources */,
+				A9D05F6C17DE47D00073DA4A /* FBSideMenuViewController.m in Sources */,
+				A9D05F7017DE48230073DA4A /* FBSideMenuViewCell.m in Sources */,
+				A9D05F7417DE49E00073DA4A /* FBAboutViewController.m in Sources */,
+				A9D05F7717DE4C360073DA4A /* FBSettingsViewController.m in Sources */,
+				A9D05F7A17DE4DA60073DA4A /* FBFablesViewController.m in Sources */,
+				A9D05F7D17DE4DD20073DA4A /* FBFableDetailViewController.m in Sources */,
+				A9D05F8017DE4EDE0073DA4A /* FBFableDataProvider.m in Sources */,
+				A9D05F8417DE51150073DA4A /* FBFableClient.m in Sources */,
+				A9D05F8A17DE5F810073DA4A /* FBFablesViewFableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
