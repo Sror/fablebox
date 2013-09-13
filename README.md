@@ -33,5 +33,4 @@ Development Stack
  - Ruby on Rails 4.0.0
  - Amazon EC2 Micro Instance (Ubuntu 12.04 LTS)
  - Nginx, Passenger, RVM
- - Rubymine IDE
  - ..
