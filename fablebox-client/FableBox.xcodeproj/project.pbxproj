@@ -63,7 +63,7 @@
 /* Begin PBXFileReference section */
 		A96CD9A917E6092800C4DEAB /* FBUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUserService.h; sourceTree = "<group>"; };
 		A96CD9AA17E6092800C4DEAB /* FBUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUserService.m; sourceTree = "<group>"; };
-		A9D05F1617DB49B20073DA4A /* FableBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FableBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D05F1617DB49B20073DA4A /* Masal Kutusu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Masal Kutusu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D05F1917DB49B20073DA4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9D05F1B17DB49B20073DA4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9D05F1D17DB49B20073DA4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,7 +168,7 @@
 		A9D05F1717DB49B20073DA4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9D05F1617DB49B20073DA4A /* FableBox.app */,
+				A9D05F1617DB49B20073DA4A /* Masal Kutusu.app */,
 				A9D05F3C17DB49B20073DA4A /* FableBoxTests.octest */,
 			);
 			name = Products;
@@ -402,7 +402,7 @@
 			);
 			name = FableBox;
 			productName = FableBox;
-			productReference = A9D05F1617DB49B20073DA4A /* FableBox.app */;
+			productReference = A9D05F1617DB49B20073DA4A /* Masal Kutusu.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A9D05F3B17DB49B20073DA4A /* FableBoxTests */ = {
@@ -662,7 +662,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FableBox/FableBox-Prefix.pch";
 				INFOPLIST_FILE = "FableBox/FableBox-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Masal Kutusu";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -674,7 +674,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FableBox/FableBox-Prefix.pch";
 				INFOPLIST_FILE = "FableBox/FableBox-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Masal Kutusu";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
