@@ -273,14 +273,14 @@
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Satin Aldiklarim" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E9s-vu-Yi2">
-                                                    <rect key="frame" x="10" y="11" width="129" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Indirdiklerim" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E9s-vu-Yi2">
+                                                    <rect key="frame" x="10" y="11" width="103" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c2t-1g-r12">
-                                                    <rect key="frame" x="214" y="11" width="56" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c2t-1g-r12">
+                                                    <rect key="frame" x="260" y="11" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -294,7 +294,7 @@
                             <tableViewSection headerTitle="Kullanici" id="3nj-Bi-9hp">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0Xd-py-RG1" detailTextLabel="IEe-KJ-F9Z" style="IBUITableViewCellStyleValue1" id="aaY-cN-i4y">
-                                        <rect key="frame" x="0.0" y="138" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="138" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -308,29 +308,6 @@
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="14" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IEe-KJ-F9Z">
                                                     <rect key="frame" x="271" y="11" width="19" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nH6-VQ-6Og" detailTextLabel="lq7-yk-hbj" style="IBUITableViewCellStyleValue1" id="5n0-ul-jbb">
-                                        <rect key="frame" x="0.0" y="183" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Installation Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nH6-VQ-6Og">
-                                                    <rect key="frame" x="10" y="11" width="110" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="100012" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lq7-yk-hbj">
-                                                    <rect key="frame" x="233" y="11" width="57" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -524,7 +501,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9i-HS-Ews">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5:34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9i-HS-Ews">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="3aL-Ee-xy1"/>
                                                         <constraint firstAttribute="height" constant="21" id="dJf-hu-dpt"/>
@@ -616,71 +593,6 @@
         <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb-settings-icon.png" width="24" height="24"/>
     </resources>
-    <classes>
-        <class className="FBAboutViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBAboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showSideMenu:"/>
-                <relationship kind="outlet" name="appVersion" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FBFableDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBFableDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sliderDragged:"/>
-                <relationship kind="action" name="togglePlayPauseTapped:"/>
-                <relationship kind="outlet" name="dateAdded" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="duration" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="guid" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="isPaid" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="length" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="progressStatus" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="togglePlayPause" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="FBFablesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBFablesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="listFables:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="showSideMenu:"/>
-            </relationships>
-        </class>
-        <class className="FBFablesViewFableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBFablesViewFableCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateAdded" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="isPaid" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="length" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FBSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBSettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showSideMenu:"/>
-                <relationship kind="outlet" name="userId" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FBSideMenuViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBSideMenuViewCell.h"/>
-        </class>
-        <class className="FBSideMenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBSideMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="navigateToAboutCell" candidateClass="FBSideMenuViewCell"/>
-                <relationship kind="outlet" name="navigateToOutagesCell" candidateClass="FBSideMenuViewCell"/>
-                <relationship kind="outlet" name="navigateToSettingsCell" candidateClass="FBSideMenuViewCell"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

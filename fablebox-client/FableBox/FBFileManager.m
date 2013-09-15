@@ -10,7 +10,7 @@
 
 @interface FBFileManager()
 
-- (NSString*) getFilePathForFileDir:(NSString*)fileDir withFableId:(NSString*)fableId;
+- (NSString*) getFilePathForFileDir:(NSString*)fileDir withGuid:(NSString*)fableGuid;
 
 @end
 
@@ -30,10 +30,10 @@
     }
 }
 
-- (NSURL*) getUrlForUrlPath:(NSString*)urlPath withFableId:(NSString*)fableId
+- (NSURL*) getUrlForAPI:(NSString*)urlPath withGuid:(NSString*)fableGuid
 {
     NSString *baseUrl = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, urlPath];
-    NSString *fileUrl = [baseUrl stringByAppendingPathComponent:fableId];
+    NSString *fileUrl = [baseUrl stringByAppendingPathComponent:fableGuid];
     NSURL *url = [NSURL URLWithString:fileUrl];
     return url;
 }
@@ -54,55 +54,42 @@
     return filePath;
 }
 
-- (void)saveFableAudioWithId:(NSString*)fableId downloadedData:(NSData*)downloadedData
+- (void)saveFableAudioWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withFableId:fableId];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withFableId:fableGuid];
     [downloadedData writeToFile:filePath atomically:YES];
 }
 
-- (void)saveFableImageSmallWithId:(NSString*)fableId downloadedData:(NSData*)downloadedData
+- (void)saveFableImageSmallWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withFableId:fableId];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withFableId:fableGuid];
     [downloadedData writeToFile:filePath atomically:YES];
 }
 
-- (void)saveFableImageLargeWithId:(NSString*)fableId downloadedData:(NSData*)downloadedData
+- (void)saveFableImageLargeWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableId];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableGuid];
     [downloadedData writeToFile:filePath atomically:YES];
 }
 
-//- (void)downloadFableImageLargeWithId:(NSString*)fableId onComplete:(void (^) (void))onComplete
-//{
-//    NSURL *fileUrl = [self getUrlForUrlPath:URL_FABLE_IMAGE_LARGE withFableId:fableId];
-//    [[self downloadManager] downloadFileWithUrl:fileUrl andNotify:^(NSData *downloadedData) {
-//        if (downloadedData)
-//        {
-//            NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableId];
-//            [downloadedData writeToFile:filePath atomically:YES];
-//        }
-//        onComplete();
-//    }];
-//}
-
-- (NSData*) loadFableAudioWithId:(NSString*)fableId
+- (NSData*) loadFableAudioWithId:(NSString*)fableGuid
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withFableId:fableId];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withFableId:fableGuid];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     return data;
 }
 
-- (UIImage*) loadFableImageSmallWithId:(NSString*)fableId
+- (UIImage*) loadFableImageSmallWithId:(NSString*)fableGuid
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withFableId:fableId];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withFableId:fableGuid];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     UIImage *image = [UIImage imageWithData: data];
     return image;
 }
 
-- (UIImage*) loadFableImageLargeWithId:(NSString*)fableId
+- (UIImage*) loadFableImageLargeWithId:(NSString*)fableGuid
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableId];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableGuid];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     UIImage *image = [UIImage imageWithData: data];
     return image;

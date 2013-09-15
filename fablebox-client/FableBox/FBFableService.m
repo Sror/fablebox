@@ -7,26 +7,26 @@
 //
 
 #import "FBFable.h"
-#import "FBFableDataProvider.h"
+#import "FBFableService.h"
 #import "FBFableClientProtocol.h"
-#import "FBFableClient.h"
-#import "FBDummyFableClient.h"
+#import "FBRemoteClient.h"
+#import "FBDummyRemoteClient.h"
 
-@interface FBFableDataProvider()
+@interface FBFableService()
 
-@property () id<FBFableClientProtocol> fableClient;
+@property (strong, nonatomic) id<FBRemoteClientProtocol> remoteClient;
 
 @end
 
-@implementation FBFableDataProvider
+@implementation FBFableService
 
 - (id)init
 {
     if (self = [super init])
     {
-        if(self.fableClient == nil)
+        if(self.remoteClient == nil)
         {
-            self.fableClient = [[FBDummyFableClient alloc] init];
+            self.remoteClient = [FBRemoteClient sharedSingleton];
         }
         return self;
     }
@@ -56,17 +56,16 @@
     [self.fableList addObject:fable];
 }
 
-- (void) reloadFablesAndNotify:(void (^) (void))onComplete
+- (void) reloadFables:(void (^) (void))onComplete
 {
     self.fableList = [[NSMutableArray alloc] init];
-    [self.fableClient getFables:^(NSMutableArray *fables) {
-        for (FBFable *fable in fables) {
+    [self.remoteClient getFables:^(NSMutableArray *fables){
+        for (FBFable *fable in fables)
+        {
             [self.fableList addObject:fable];
-        }
-        
+        }  
         onComplete();
     }];
 }
-
 
 @end

@@ -9,12 +9,14 @@
 
 @interface FBFable : NSObject
 
+@property (nonatomic, copy) NSString    *fableId;
 @property (nonatomic, copy) NSString    *guid;
 @property (nonatomic, copy) NSString    *name;
 @property (nonatomic, copy) NSDate      *dateAdded;
 @property (nonatomic)       NSInteger   lengthInSeconds;
 @property (nonatomic)       NSInteger   isPaid;
 
--(id) initWithName:(NSString *) name dateAdded:(NSDate *) dateAdded lengthInSeconds:(NSInteger)length isPaid:(NSInteger)isPaid;
+- (id) initWithName:(NSString *) name dateAdded:(NSDate *) dateAdded lengthInSeconds:(NSInteger)length isPaid:(NSInteger)isPaid;
+- (NSString*) formattedLength;
 
 @end

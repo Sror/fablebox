@@ -27,4 +27,15 @@
     return nil;
 }
 
+- (NSString*) formattedLength
+{
+    NSInteger min = self.lengthInSeconds / 60;
+    NSInteger sec = self.lengthInSeconds % 60;
+    
+    NSString *minStr = [NSString stringWithFormat:(min >= 10 ? @"%d" : @"0%d"), min];
+    NSString *secStr = [NSString stringWithFormat:(min >= 10 ? @"%d" : @"0%d"), sec];
+    
+    return [NSString stringWithFormat:@"%@:%@", minStr, secStr];
+}
+
 @end

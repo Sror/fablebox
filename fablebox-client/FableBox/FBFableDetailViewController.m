@@ -29,6 +29,7 @@
     [self configureView];
     
     self.fileManager = [FBFileManager sharedSingleton];
+    self.slider.value = 0;
     [self handleFableAudio];
     [self handleFableImage];
 }
@@ -69,7 +70,7 @@
     {
         self.name.text = theFable.name;
         self.dateAdded.text = [FBUtils formatDate:theFable.dateAdded];
-        self.length.text = [NSString stringWithFormat:@"%i", theFable.lengthInSeconds];
+        self.length.text = [theFable formattedLength];
         self.isPaid.text = theFable.isPaid > 0 ? @"PAID" : @"FREE";
     }
 }
@@ -89,15 +90,32 @@
     }
 }
 
+- (void) startfableWithData:(NSData*)audioData
+{
+    self.progressStatus.text = @"";
+    NSError *error = nil;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
+    if(error)
+    {
+        NSLog(@"%@", error);
+    }
+    
+    self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
+    self.slider.maximumValue = self.audioPlayer.duration;
+    [self.slider addTarget:self action:@selector(sliderDragged:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.audioPlayer setDelegate:self];
+    [self.audioPlayer play];
+}
+
 - (void) handleFableAudio
 {
-    NSString *fableId = self.fable.guid;
-    NSData *audioData = [self.fileManager loadFableAudioWithId:fableId];
+    NSString *fableGuid = self.fable.guid;
+    NSData *audioData = [self.fileManager loadFableAudioWithId:fableGuid];
     
     if(audioData == nil)
     {
-        NSURL *url = [NSURL URLWithString:@"http://192.168.1.64:3000/100100"];
-        //    NSURL *url = [self.fileManager getUrlForUrlPath:URL_FABLE_AUDIO withFableId:self.fable.guid];
+        NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_AUDIO withGuid:self.fable.guid];
         [IADownloadManager downloadItemWithURL:url useCache:NO];
         
         [IADownloadManager attachListenerWithObject:self
@@ -108,27 +126,15 @@
                 completionBlock:^(BOOL success, id response)
                 {
                     NSLog(@"Fable audio download success.");
-                    // save downloaded file
+                    // save downloaded file, then play
                     [self.fileManager saveFableAudioWithId:self.fable.guid downloadedData:response];
+                    [self startfableWithData:response];
                 }
                 toURL:url];
     }
     else
     {
-        self.progressStatus.text = @"";
-        NSError *error = nil;
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
-        if(error)
-        {
-            NSLog(@"%@", error);
-        }
-        
-        self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
-        self.slider.maximumValue = self.audioPlayer.duration;
-        [self.slider addTarget:self action:@selector(sliderDragged:) forControlEvents:UIControlEventValueChanged];
-        
-        [self.audioPlayer setDelegate:self];
-        [self.audioPlayer play];
+        [self startfableWithData:audioData];
     }
 }
 

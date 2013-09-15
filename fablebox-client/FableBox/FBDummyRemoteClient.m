@@ -1,5 +1,5 @@
 //
-//  FBDummyFableClient.m
+//  FBDummyRemoteClient.m
 //  FableBox
 //
 //  Created by Halil AYYILDIZ on 9/9/13.
@@ -7,11 +7,11 @@
 //
 
 #import "FBFable.h"
-#import "FBDummyFableClient.h"
+#import "FBDummyRemoteClient.h"
 
-@implementation FBDummyFableClient
+@implementation FBDummyRemoteClient
 
-- (void) getFables:(void (^)(NSMutableArray *fables))onCompleteSend
+- (void) getFables:(void (^)(NSMutableArray *fables))onCompleteSend;
 {
     static int counter = 1;
     
@@ -39,7 +39,7 @@
     onCompleteSend(newFableList);
 }
 
-- (void) registerUserAndNotify:(void (^)(NSString *userId))onComplete
+- (void) registerUser:(void (^)(NSString *userId))onComplete;
 {
     //TODO
     

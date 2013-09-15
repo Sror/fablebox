@@ -8,7 +8,7 @@
 
 @class FBFable;
 
-@interface FBFableDataProvider : NSObject
+@interface FBFableService : NSObject
 
 @property (nonatomic, copy) NSMutableArray *fableList;
 
@@ -16,6 +16,6 @@
 - (FBFable *) objectInListAtIndex:(NSUInteger)index;
 - (void) addFable:(FBFable *)fable;
 
-- (void) reloadFablesAndNotify:(void (^) (void))onComplete;
+- (void) reloadFables:(void (^) (void))onComplete;
 
 @end

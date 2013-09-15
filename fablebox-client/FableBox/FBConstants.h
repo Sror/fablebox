@@ -14,20 +14,24 @@
 #define SERVER_PORT                             @"3000"
 #endif
 
-#define URL_FABLE_AUDIO                         @"/fable/audio/get"
-#define URL_FABLE_IMAGE_SMALL                   @"/fable/image/big/get"
-#define URL_FABLE_IMAGE_LARGE                   @"/fable/image/small/large"
-
 #define DIR_FABLE_AUDIO                         @"fable/audio"
-#define DIR_FABLE_IMAGE_SMALL                   @"fable/image/big"
+#define DIR_FABLE_IMAGE_SMALL                   @"fable/image/small"
 #define DIR_FABLE_IMAGE_LARGE                   @"fable/image/large"
 
 #define API_HTTP_PREFIX                         @"http://"
-#define API_QUERY_ALL_FABLES                    @"/api/fable/all"
-#define API_QUERY_REGISTER_USER                 @"/api/user/register"
-#define API_PARAM_PUSH_TOKEN                    @"push_token"
+#define API_FABLE_LIST                          @"/api/fable/list"
+#define API_FABLE_AUDIO                         @"/api/fable/audio"
+#define API_FABLE_IMAGE_SMALL                   @"/api/fable/image/small"
+#define API_FABLE_IMAGE_LARGE                   @"/api/fable/image/large"
+#define API_USER_REGISTER                       @"/api/user/register"
+#define API_USER_PURCHASE                       @"/api/user/purchase"
+
+#define PARAM_USER_ID                           @"user_id"
+#define PARAM_APPLE_ID                          @"apple_id"
+#define PARAM_PUSH_TOKEN                        @"push_id"
 
 #define APP_USER_ID                             @"FBUserId"
+#define APP_APPLE_ID                            @"FBAppleId"
 #define APP_PUSH_TOKEN                          @"FBPushToken"
 
 #define BGCOLOR                                 0xD0D5DE

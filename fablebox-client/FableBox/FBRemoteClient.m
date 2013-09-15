@@ -1,5 +1,5 @@
 //
-//  FBFableClient.m
+//  FBRemoteClient.m
 //  FableBox
 //
 //  Created by Halil AYYILDIZ on 9/9/13.
@@ -8,22 +8,38 @@
 
 #import "AFNetworking.h"
 #import "FBFable.h"
-#import "FBFableClient.h"
+#import "FBRemoteClient.h"
 
-@interface FBFableClient()
+@interface FBRemoteClient()
 
 - (NSMutableArray *)parseFables:(NSArray *)outagesJSON;
 - (NSString *)parseUserId:(NSDictionary *)userJSON;
 - (NSString *)getDeviceToken;
+- (NSString *)getAppleId;
 
 @end
 
-@implementation FBFableClient
+@implementation FBRemoteClient
 
-- (void) getFables:(void (^)(NSMutableArray *fables))onCompleteSend {
++ (FBRemoteClient *)sharedSingleton
+{
+    static FBRemoteClient *sharedSingleton;
     
+    @synchronized(self)
+    {
+        if (!sharedSingleton)
+        {
+            sharedSingleton = [[FBRemoteClient alloc] init];
+        }
+        return sharedSingleton;
+    }
+}
+
+
+- (void) getFables:(void (^)(NSMutableArray *fables))onCompleteSend
+{
     // prepare url string
-    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_QUERY_ALL_FABLES];
+    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_FABLE_LIST];
     
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -32,11 +48,11 @@
     [AFJSONRequestOperation JSONRequestOperationWithRequest:request
             success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                 
-                NSMutableArray *outages = [self parseOutage:JSON];
-                onCompleteSend(outages);
+                NSMutableArray *fables = [self parseFables:JSON];
+                onCompleteSend(fables);
             }
             failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Outages"
+                UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Fables"
                                                              message:[NSString stringWithFormat:@"%@",error]
                                                             delegate:nil
                                                    cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -47,14 +63,14 @@
     [operation start];
 }
 
-- (void) registerUserAndNotify:(void (^)(NSString *userId))onComplete
+- (void) registerUser:(void (^)(NSString *userId))onComplete
 {
     // prepare url string
-    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_QUERY_REGISTER_USER];
+    NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_USER_REGISTER];
     NSURL *url = [NSURL URLWithString:urlStr];
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-    NSDictionary *params = @{API_PARAM_PUSH_TOKEN: [self getDeviceToken]};
+    NSDictionary *params = @{PARAM_PUSH_TOKEN: [self getDeviceToken], PARAM_APPLE_ID:[self getAppleId]};
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:urlStr parameters:params];
     
     AFJSONRequestOperation *operation =
@@ -73,7 +89,7 @@
     [operation start];
 }
 
-- (NSMutableArray *)parseOutage:(NSArray *)fablesJSON
+- (NSMutableArray *)parseFables:(NSArray *)fablesJSON
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
@@ -81,7 +97,8 @@
     {
         FBFable *fable = [[FBFable alloc] init];
         
-        [fable setGuid:fableJson[@"id"]];
+        [fable setFableId:fableJson[@"id"]];
+        [fable setGuid:fableJson[@"guid"]];
         [fable setName:fableJson[@"name"]];
         [fable setDateAdded:[FBUtils parseDateTime:fableJson[@"create_date"]]];
         [fable setLengthInSeconds:[fableJson[@"length_in_sec"] integerValue]];
@@ -103,6 +120,16 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *token = [defaults valueForKey:APP_PUSH_TOKEN];
+    if (token == nil) {
+        return @"";
+    }
+    return token;
+}
+
+- (NSString *)getAppleId
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *token = [defaults valueForKey:APP_APPLE_ID];
     if (token == nil) {
         return @"";
     }

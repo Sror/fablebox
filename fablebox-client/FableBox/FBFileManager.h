@@ -10,14 +10,14 @@
 
 + (FBFileManager *) sharedSingleton;
 
-- (NSURL*) getUrlForUrlPath:(NSString*)urlPath withFableId:(NSString*)fableId;
+- (NSURL*) getUrlForAPI:(NSString*)urlPath withGuid:(NSString*)fableGuid;
 
-- (void)saveFableAudioWithId:(NSString*)fableId downloadedData:(NSData*)downloadedData;
-- (void)saveFableImageSmallWithId:(NSString*)fableId downloadedData:(NSData*)downloadedData;
-- (void)saveFableImageLargeWithId:(NSString*)fableId downloadedData:(NSData*)downloadedData;
+- (void)saveFableAudioWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData;
+- (void)saveFableImageSmallWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData;
+- (void)saveFableImageLargeWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData;
 
-- (NSData*) loadFableAudioWithId:(NSString*)fableId;
-- (UIImage*) loadFableImageSmallWithId:(NSString*)fableId;
-- (UIImage*) loadFableImageLargeWithId:(NSString*)fableId;
+- (NSData*) loadFableAudioWithId:(NSString*)fableGuid;
+- (UIImage*) loadFableImageSmallWithId:(NSString*)fableGuid;
+- (UIImage*) loadFableImageLargeWithId:(NSString*)fableGuid;
 
 @end

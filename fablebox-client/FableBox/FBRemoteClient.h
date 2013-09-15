@@ -1,5 +1,5 @@
 //
-//  FBDummyFableClient.h
+//  FBRemoteClient.h
 //  FableBox
 //
 //  Created by Halil AYYILDIZ on 9/9/13.
@@ -8,6 +8,8 @@
 
 #import "FBFableClientProtocol.h"
 
-@interface FBDummyFableClient : NSObject <FBFableClientProtocol>
+@interface FBRemoteClient : NSObject <FBRemoteClientProtocol>
+
++ (FBRemoteClient *)sharedSingleton;
 
 @end

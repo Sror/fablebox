@@ -7,8 +7,10 @@
 //
 
 #import "MFSideMenu.h"
+#import "MBProgressHUD.h"
 #import "FBAppDelegate.h"
-#import "FBFableDataProvider.h"
+#import "FBFableService.h"
+#import "FBUserService.h"
 #import "FBFable.h"
 #import "FBFablesViewController.h"
 #import "FBFablesViewFableCell.h"
@@ -16,6 +18,8 @@
 
 @interface FBFablesViewController ()
 
+@property (strong, nonatomic) FBFableService *fableService;
+@property (strong, nonatomic) FBUserService *userService;
 -(BOOL)isUserRegistered;
 
 @end
@@ -30,7 +34,8 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.dataProvider = [[FBFableDataProvider alloc] init];
+    self.fableService = [[FBFableService alloc] init];
+    self.userService = [[FBUserService alloc] init];
 }
 
 - (void)viewDidLoad
@@ -44,10 +49,10 @@
     [refreshControl addTarget:self action:@selector(refreshViewData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
-    // check if user is registered or not
+    // check if user is registered
     if (!self.isUserRegistered)
     {
-        // TODO
+        [self registerUser];
     }
     
     [self refreshViewData];
@@ -79,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dataProvider fableCountInList];
+    return [self.fableService fableCountInList];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,10 +93,10 @@
     
     FBFablesViewFableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    FBFable *fableAtIndex = [self.dataProvider objectInListAtIndex:indexPath.row];
+    FBFable *fableAtIndex = [self.fableService objectInListAtIndex:indexPath.row];
     [[cell name] setText:fableAtIndex.name];
     [[cell dateAdded] setText:[FBUtils formatDate:fableAtIndex.dateAdded]];
-    [[cell length] setText:[NSString stringWithFormat:@"%i", fableAtIndex.lengthInSeconds]];
+    [[cell length] setText:[fableAtIndex formattedLength]];
     [[cell isPaid] setText:fableAtIndex.isPaid > 0 ? @"PAID" : @"FREE"];
     
     return cell;
@@ -110,7 +115,7 @@
 
 - (void)refreshViewData
 {
-    [self.dataProvider reloadFablesAndNotify:^{
+    [self.fableService reloadFables:^{
         [self updateTable];
     }];
 }
@@ -126,8 +131,13 @@
     if ([[segue identifier] isEqualToString:@"showFableDetail"])
     {
         FBFableDetailViewController *detailViewController = [segue destinationViewController];
-        detailViewController.fable = [self.dataProvider objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+        detailViewController.fable = [self.fableService objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
+}
+
+- (IBAction)listFables:(UIStoryboardSegue *)unwindSegue
+{
+    NSLog(@"Back to fable listing");
 }
 
 -(BOOL)isUserRegistered
@@ -138,9 +148,21 @@
     return !(userId == nil || [userId isEqualToString:@""]);
 }
 
-- (IBAction)listFables:(UIStoryboardSegue *)unwindSegue
-{
-    NSLog(@"Back to fable listing");
+- (void)registerUser
+{    
+    [MBProgressHUD showHUDAddedTo:self.tableView  animated:YES];
+    
+    [[self userService] registerUser:^(NSString *userId) {
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        
+        if (userId == nil)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to complete registration."
+                                                            message:[NSString stringWithFormat:@"Unexpected Error"]
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    }];
 }
 
 @end
