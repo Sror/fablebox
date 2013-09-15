@@ -112,7 +112,7 @@
 
 - (NSString *)parseUserId:(NSDictionary *)userJSON
 {
-    NSInteger userId = [userJSON[@"user_id"] integerValue];
+    NSInteger userId = [userJSON[@"id"] integerValue];
     return [NSString stringWithFormat:@"%d", userId];
 }
 
