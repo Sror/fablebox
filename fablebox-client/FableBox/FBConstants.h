@@ -14,6 +14,14 @@
 #define SERVER_PORT                             @"3000"
 #endif
 
+#define URL_FABLE_AUDIO                         @"/fable/audio/get"
+#define URL_FABLE_IMAGE_SMALL                   @"/fable/image/big/get"
+#define URL_FABLE_IMAGE_LARGE                   @"/fable/image/small/large"
+
+#define DIR_FABLE_AUDIO                         @"fable/audio"
+#define DIR_FABLE_IMAGE_SMALL                   @"fable/image/big"
+#define DIR_FABLE_IMAGE_LARGE                   @"fable/image/large"
+
 #define API_HTTP_PREFIX                         @"http://"
 #define API_QUERY_ALL_FABLES                    @"/api/fable/all"
 #define API_QUERY_REGISTER_USER                 @"/api/user/register"

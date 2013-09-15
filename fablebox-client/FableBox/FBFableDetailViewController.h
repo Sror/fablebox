@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+
 @class FBFable;
 
 @interface FBFableDetailViewController : UITableViewController
@@ -17,5 +20,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateAdded;
 @property (weak, nonatomic) IBOutlet UILabel *length;
 @property (weak, nonatomic) IBOutlet UILabel *isPaid;
+
+@property (weak, nonatomic) IBOutlet UIButton *togglePlayPause;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel  *duration;
+@property (weak, nonatomic) IBOutlet UILabel  *progressStatus;
 
 @end

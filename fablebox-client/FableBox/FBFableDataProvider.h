@@ -1,5 +1,5 @@
 //
-//  FBFableDataProvider.h
+//  FBDataProvider.h
 //  FableBox
 //
 //  Created by Halil AYYILDIZ on 9/9/13.

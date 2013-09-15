@@ -43,6 +43,10 @@
 		A9D05F9B17DE63FA0073DA4A /* fb-settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9317DE63FA0073DA4A /* fb-settings-icon.png */; };
 		A9D05F9C17DE63FA0073DA4A /* fb-settings-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */; };
 		A9D05F9F17DE6C7E0073DA4A /* FBDummyFableClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05F9E17DE6C7E0073DA4A /* FBDummyFableClient.m */; };
+		A9D05FA117E3A5960073DA4A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05FA017E3A5960073DA4A /* CoreMedia.framework */; };
+		A9D05FA317E3A5AA0073DA4A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05FA217E3A5AA0073DA4A /* AVFoundation.framework */; };
+		A9D05FA517E3A5BD0073DA4A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D05FA417E3A5BD0073DA4A /* MediaPlayer.framework */; };
+		A9D05FA817E3ADE00073DA4A /* FBFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D05FA717E3ADE00073DA4A /* FBFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,11 @@
 		A9D05F9417DE63FA0073DA4A /* fb-settings-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fb-settings-icon@2x.png"; path = "images/fb-settings-icon@2x.png"; sourceTree = "<group>"; };
 		A9D05F9D17DE6C7E0073DA4A /* FBDummyFableClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDummyFableClient.h; sourceTree = "<group>"; };
 		A9D05F9E17DE6C7E0073DA4A /* FBDummyFableClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDummyFableClient.m; sourceTree = "<group>"; };
+		A9D05FA017E3A5960073DA4A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A9D05FA217E3A5AA0073DA4A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A9D05FA417E3A5BD0073DA4A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A9D05FA617E3ADE00073DA4A /* FBFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFileManager.h; sourceTree = "<group>"; };
+		A9D05FA717E3ADE00073DA4A /* FBFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFileManager.m; sourceTree = "<group>"; };
 		B2BAF2436ABF46E89CD30AA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D42E4BDC32437DA2ACA8AD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -119,6 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D05FA517E3A5BD0073DA4A /* MediaPlayer.framework in Frameworks */,
+				A9D05FA317E3A5AA0073DA4A /* AVFoundation.framework in Frameworks */,
+				A9D05FA117E3A5960073DA4A /* CoreMedia.framework in Frameworks */,
 				A9D05F1A17DB49B20073DA4A /* UIKit.framework in Frameworks */,
 				A9D05F1C17DB49B20073DA4A /* Foundation.framework in Frameworks */,
 				A9D05F1E17DB49B20073DA4A /* CoreGraphics.framework in Frameworks */,
@@ -162,6 +174,9 @@
 		A9D05F1817DB49B20073DA4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9D05FA417E3A5BD0073DA4A /* MediaPlayer.framework */,
+				A9D05FA217E3A5AA0073DA4A /* AVFoundation.framework */,
+				A9D05FA017E3A5960073DA4A /* CoreMedia.framework */,
 				A9D05F1917DB49B20073DA4A /* UIKit.framework */,
 				A9D05F1B17DB49B20073DA4A /* Foundation.framework */,
 				A9D05F1D17DB49B20073DA4A /* CoreGraphics.framework */,
@@ -342,6 +357,8 @@
 			children = (
 				A9D05F7E17DE4EDD0073DA4A /* FBFableDataProvider.h */,
 				A9D05F7F17DE4EDE0073DA4A /* FBFableDataProvider.m */,
+				A9D05FA617E3ADE00073DA4A /* FBFileManager.h */,
+				A9D05FA717E3ADE00073DA4A /* FBFileManager.m */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -526,6 +543,7 @@
 				A9D05F8417DE51150073DA4A /* FBFableClient.m in Sources */,
 				A9D05F8A17DE5F810073DA4A /* FBFablesViewFableCell.m in Sources */,
 				A9D05F9F17DE6C7E0073DA4A /* FBDummyFableClient.m in Sources */,
+				A9D05FA817E3ADE00073DA4A /* FBFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

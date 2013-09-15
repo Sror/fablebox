@@ -17,7 +17,7 @@
     if (self) {
         // TODO
         
-        _guid = @"AA00000BBBB";
+        _guid = @"100100";
         _name = name;
         _dateAdded = dateAdded;
         _lengthInSeconds = length;
