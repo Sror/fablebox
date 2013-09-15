@@ -11,7 +11,7 @@
 
 @class FBFable;
 
-@interface FBFableDetailViewController : UITableViewController
+@interface FBFableDetailViewController : UITableViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) FBFable *fable;
 
@@ -25,5 +25,8 @@
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel  *duration;
 @property (weak, nonatomic) IBOutlet UILabel  *progressStatus;
+
+- (IBAction)togglePlayPauseTapped:(id)sender;
+- (IBAction)sliderDragged:(id)sender;
 
 @end

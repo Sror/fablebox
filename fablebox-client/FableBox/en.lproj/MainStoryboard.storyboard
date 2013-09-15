@@ -561,6 +561,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="togglePlayPauseTapped:" destination="nzE-HK-6l8" eventType="touchUpInside" id="IFy-wu-PM6"/>
+                                                    </connections>
                                                 </button>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-wZ-nhf"/>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Downloading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiG-GH-0JE">
@@ -598,9 +601,11 @@
                         <outlet property="progressStatus" destination="HiG-GH-0JE" id="lOZ-h2-abe"/>
                         <outlet property="slider" destination="ijS-wZ-nhf" id="3Qz-gK-WVb"/>
                         <outlet property="togglePlayPause" destination="h6l-8s-iAr" id="qBa-Mh-Tvf"/>
+                        <segue destination="03V-au-mai" kind="unwind" unwindAction="listFables:" id="rJZ-bf-e21"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gW-Bh-UBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="03V-au-mai" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="323" y="-488"/>
         </scene>
@@ -622,6 +627,8 @@
         <class className="FBFableDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FBFableDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="sliderDragged:"/>
+                <relationship kind="action" name="togglePlayPauseTapped:"/>
                 <relationship kind="outlet" name="dateAdded" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="duration" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="guid" candidateClass="UILabel"/>

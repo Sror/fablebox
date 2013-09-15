@@ -15,7 +15,8 @@
 
 @interface FBFableDetailViewController ()
 
-@property (strong, nonatomic) AVPlayer *audioPlayer;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong, nonatomic) NSTimer *sliderTimer;
 @property (strong, nonatomic) FBFileManager *fileManager;
 
 @end
@@ -36,6 +37,12 @@
 {
     FBAppDelegate *appDelegate = (FBAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeNone;
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [self.audioPlayer stop];
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,9 +92,9 @@
 - (void) handleFableAudio
 {
     NSString *fableId = self.fable.guid;
-    NSData *fableAudio = [self.fileManager loadFableAudioWithId:fableId];
+    NSData *audioData = [self.fileManager loadFableAudioWithId:fableId];
     
-    if(fableAudio == nil)
+    if(audioData == nil)
     {
         NSURL *url = [NSURL URLWithString:@"http://192.168.1.64:3000/100100"];
         //    NSURL *url = [self.fileManager getUrlForUrlPath:URL_FABLE_AUDIO withFableId:self.fable.guid];
@@ -109,6 +116,40 @@
     else
     {
         self.progressStatus.text = @"";
+        NSError *error = nil;
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
+        if(error)
+        {
+            NSLog(@"%@", error);
+        }
+        
+        self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
+        self.slider.maximumValue = self.audioPlayer.duration;
+        [self.slider addTarget:self action:@selector(sliderDragged:) forControlEvents:UIControlEventValueChanged];
+        
+        [self.audioPlayer setDelegate:self];
+        [self.audioPlayer play];
+    }
+}
+
+- (IBAction)sliderDragged:(id)sender
+{
+    [self.audioPlayer stop];
+    [self.audioPlayer setCurrentTime:self.slider.value];
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer play];
+}
+
+- (void)updateSlider
+{
+    self.slider.value = self.audioPlayer.currentTime;
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    // Music completed
+    if (flag)
+    {
+        [self.sliderTimer invalidate];
     }
 }
 
