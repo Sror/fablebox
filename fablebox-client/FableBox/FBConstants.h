@@ -11,7 +11,7 @@
 #define SERVER_PORT                             @"3000"
 #else
 #define SERVER_HOSTNAME                         @"halilayyildiz.com"
-#define SERVER_PORT                             @"3000"
+#define SERVER_PORT                             @"3001"
 #endif
 
 #define DIR_FABLE_AUDIO                         @"fable/audio"
