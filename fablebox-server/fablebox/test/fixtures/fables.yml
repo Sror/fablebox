@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  guid: MyString
+  name: MyString
+  date_added: 2013-09-15
+  length_in_sec: 1
+  is_paid: 1
+
+two:
+  guid: MyString
+  name: MyString
+  date_added: 2013-09-15
+  length_in_sec: 1
+  is_paid: 1

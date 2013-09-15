@@ -1,0 +1,2 @@
+class FablesController < ApplicationController
+end
