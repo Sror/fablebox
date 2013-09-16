@@ -11,11 +11,12 @@ Features
  - Play fables (mp3 audio)
  - Play, pause and stop fables
  - Cache & store fables on iphone
- - Only for Turkish store
+ - List donwloaded fables
 - [v2]
+ - Push notifications for new fables & news
+ - List & delete downloaded fables
  - Mobile ads support
  - Paid fables, app-in purchase support
- - Push notifications for new fables & news
 - [v3]
  - iPad support (universal app)
 
