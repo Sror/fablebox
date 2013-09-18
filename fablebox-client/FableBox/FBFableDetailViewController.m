@@ -121,7 +121,7 @@
         [IADownloadManager attachListenerWithObject:self
                 progressBlock:^(float progress, NSURL *url)
                 {
-                    self.progressStatus.text = [NSString stringWithFormat:@"Indiriliyor %% %f", (progress * 100)];
+                    self.progressStatus.text = [NSString stringWithFormat:@"Indiriliyor   %% %.0lf", (progress * 100)];
                 }
                 completionBlock:^(BOOL success, id response)
                 {
