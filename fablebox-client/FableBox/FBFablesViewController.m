@@ -42,10 +42,10 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
+//    self.view.backgroundColor = UIColorFromRGB(BGCOLOR);
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.tintColor = [UIColor whiteColor];
+    refreshControl.tintColor = [UIColor grayColor];
     [refreshControl addTarget:self action:@selector(refreshViewData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     

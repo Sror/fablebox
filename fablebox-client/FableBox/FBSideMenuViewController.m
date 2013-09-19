@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = UIColorFromRGB(SIDE_VIEW_BG_COLOR);
+    self.view.backgroundColor = UIColorFromRGB(SIDE_VIEW_ETCH_LIGHT_COLOR);
 }
 
 - (void)didReceiveMemoryWarning

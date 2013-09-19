@@ -15,7 +15,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        self.layer.masksToBounds = YES;
+//        self.layer.masksToBounds = YES;
     }
     return self;
 }

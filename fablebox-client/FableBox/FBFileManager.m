@@ -38,12 +38,12 @@
     return url;
 }
 
-- (NSString*) getFilePathForFileDir:(NSString*)fileDir withFableId:(NSString*)fableId
+- (NSString*) getFilePathForFileDir:(NSString*)fileDir withGuid:(NSString*)fableGuid;
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];
     NSString *basePath = [documentsPath stringByAppendingPathComponent:fileDir];
-    NSString *filePath = [basePath stringByAppendingPathComponent:fableId];
+    NSString *filePath = [basePath stringByAppendingPathComponent:fableGuid];
     
     NSError*    theError = nil; //error setting
     if (![[NSFileManager defaultManager] fileExistsAtPath:basePath])
@@ -56,32 +56,32 @@
 
 - (void)saveFableAudioWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withFableId:fableGuid];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withGuid:fableGuid];
     [downloadedData writeToFile:filePath atomically:YES];
 }
 
 - (void)saveFableImageSmallWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withFableId:fableGuid];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withGuid:fableGuid];
     [downloadedData writeToFile:filePath atomically:YES];
 }
 
 - (void)saveFableImageLargeWithId:(NSString*)fableGuid downloadedData:(NSData*)downloadedData
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableGuid];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withGuid:fableGuid];
     [downloadedData writeToFile:filePath atomically:YES];
 }
 
 - (NSData*) loadFableAudioWithId:(NSString*)fableGuid
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withFableId:fableGuid];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_AUDIO withGuid:fableGuid];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     return data;
 }
 
 - (UIImage*) loadFableImageSmallWithId:(NSString*)fableGuid
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withFableId:fableGuid];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_SMALL withGuid:fableGuid];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     UIImage *image = [UIImage imageWithData: data];
     return image;
@@ -89,7 +89,7 @@
 
 - (UIImage*) loadFableImageLargeWithId:(NSString*)fableGuid
 {
-    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withFableId:fableGuid];
+    NSString *filePath = [self getFilePathForFileDir:DIR_FABLE_IMAGE_LARGE withGuid:fableGuid];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     UIImage *image = [UIImage imageWithData: data];
     return image;
