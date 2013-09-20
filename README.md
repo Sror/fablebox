@@ -12,13 +12,18 @@ Features
  - Play, pause and stop fables
  - Cache & store fables on iphone
  - List donwloaded fables
+ - Only English support
 - [v2]
  - Push notifications for new fables & news
  - List & delete downloaded fables
  - Mobile ads support
  - Paid fables, app-in purchase support
 - [v3]
+ - Multi Language Support : English | Turkish
+ - Multi Language Content
+- [v4]
  - iPad support (universal app)
+
 
 Development Stack
 -----------------------
