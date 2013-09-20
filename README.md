@@ -1,7 +1,7 @@
-Fable Box
+Tale Box
 ========
 
-Mobile fable application for children basically plays fables as audio
+Mobile tale application for children basically plays tales as audio
 
 
 Features
