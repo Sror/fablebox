@@ -9,6 +9,7 @@
 @interface FBSettingsViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *userId;
+@property (strong, nonatomic) IBOutlet UILabel *contentLanguages;
 
 -(IBAction)showSideMenu:(id)sender;
 

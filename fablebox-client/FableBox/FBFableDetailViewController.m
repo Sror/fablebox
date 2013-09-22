@@ -11,13 +11,18 @@
 #import "FBFable.h"
 #import "FBFableDetailViewController.h"
 #import "FBFileManager.h"
+#import "FBFableAudioPlayer.h"
 
 
 @interface FBFableDetailViewController ()
 
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-@property (strong, nonatomic) NSTimer *sliderTimer;
 @property (strong, nonatomic) FBFileManager *fileManager;
+@property (strong, nonatomic) FBFableAudioPlayer *audioPlayer;
+@property (strong, nonatomic) NSTimer *sliderTimer;
+
+@property (strong, nonatomic) UIView *imageView;
+@property (strong, nonatomic) UIView *playerView;
+@property (strong, nonatomic) UIView *progressView;
 
 @end
 
@@ -29,7 +34,14 @@
     [self configureView];
     
     self.fileManager = [FBFileManager sharedSingleton];
+    self.audioPlayer = [FBFableAudioPlayer sharedSingleton];
+    self.imageView = [self.view viewWithTag:100];
+    self.playerView = [self.view viewWithTag:101];
+    self.progressView = [self.view viewWithTag:102];
+    
     self.slider.value = 0;
+    [self.togglePlayPauseButton setImage:[UIImage imageNamed:@"fb_player_pause.png"] forState:UIControlStateNormal];
+    [self.togglePlayPauseButton setImage:[UIImage imageNamed:@"fb_player_play.png"] forState:UIControlStateSelected];
     [self handleFableAudio];
     [self handleFableImage];
 }
@@ -38,11 +50,15 @@
 {
     FBAppDelegate *appDelegate = (FBAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeNone;
+    
+    self.imageView.frame = CGRectMake(20, 84, 280, [FBUtils displayMaxY]-188);
+    self.playerView.frame = CGRectMake(20, [FBUtils displayMaxY]-84, 280, 64);
+    self.progressView.frame = CGRectMake(20, [FBUtils displayMaxY]-84, 280, 64);
 }
 
 -(void) viewWillDisappear:(BOOL)animated
 {
-    [self.audioPlayer stop];
+    [self.audioPlayer stopAudio];
     [super viewWillDisappear:animated];
 }
 
@@ -78,35 +94,18 @@
 
 - (IBAction)togglePlayPauseTapped:(id)sender
 {
-    if(self.togglePlayPause.selected)
+    if(self.togglePlayPauseButton.selected)
     {
-        [self.audioPlayer pause];
-        [self.togglePlayPause setSelected:NO];
+        [self.audioPlayer playAudio];
+        [self.togglePlayPauseButton setSelected:NO];
     }
     else
     {
-        [self.audioPlayer play];
-        [self.togglePlayPause setSelected:YES];
+        [self.audioPlayer pauseAudio];
+        [self.togglePlayPauseButton setSelected:YES];
     }
 }
 
-- (void) startfableWithData:(NSData*)audioData
-{
-    self.progressStatus.text = @"";
-    NSError *error = nil;
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioData error:&error];
-    if(error)
-    {
-        NSLog(@"%@", error);
-    }
-    
-    self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
-    self.slider.maximumValue = self.audioPlayer.duration;
-    [self.slider addTarget:self action:@selector(sliderDragged:) forControlEvents:UIControlEventValueChanged];
-    
-    [self.audioPlayer setDelegate:self];
-    [self.audioPlayer play];
-}
 
 - (void) handleFableAudio
 {
@@ -115,40 +114,66 @@
     
     if(audioData == nil)
     {
-        NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_AUDIO withGuid:self.fable.guid];
-        [IADownloadManager downloadItemWithURL:url useCache:NO];
-        
-        [IADownloadManager attachListenerWithObject:self
-                progressBlock:^(float progress, NSURL *url)
-                {
-                    self.progressStatus.text = [NSString stringWithFormat:@"Indiriliyor   %% %.0lf", (progress * 100)];
-                }
-                completionBlock:^(BOOL success, id response)
-                {
-                    NSLog(@"Fable audio download success.");
-                    // save downloaded file, then play
-                    [self.fileManager saveFableAudioWithId:self.fable.guid downloadedData:response];
-                    [self startfableWithData:response];
-                }
-                toURL:url];
+        [self downloadAndPlayFableAudio];
+        [self.playerView setHidden:YES];
     }
     else
     {
-        [self startfableWithData:audioData];
+        [self playFableAudio:audioData];
+        [self.progressView setHidden:YES];
     }
+}
+
+- (void) playFableAudio:(NSData*)audioData
+{
+    self.downloadProgressStatus.text = @"";
+    [self.audioPlayer initAudioPlayerWith:audioData];
+    
+    self.sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
+    self.slider.maximumValue = [self.audioPlayer getAudioDuration];
+//    [self.slider addTarget:self action:@selector(sliderDragged:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.audioPlayer setDelegate:self];
+    [self.audioPlayer playAudio];
+}
+
+- (void) downloadAndPlayFableAudio
+{
+    NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_AUDIO withGuid:self.fable.guid];
+    [IADownloadManager downloadItemWithURL:url useCache:NO];
+    
+    [IADownloadManager attachListenerWithObject:self
+        progressBlock:^(float progress, NSURL *url)
+        {
+            self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
+            self.downloadProgressView.progress = progress;
+        }
+        completionBlock:^(BOOL success, id response)
+        {
+            NSLog(@"Fable audio download success.");
+            // save downloaded file, then play
+            [self.fileManager saveFableAudioWithId:self.fable.guid downloadedData:response];
+            if (self.isViewLoaded && self.view.window)
+            {
+                // viewController is visible
+                [self playFableAudio:response];
+                [self.progressView setHidden:YES];
+                [self.playerView setHidden:NO];
+            }
+        }
+    toURL:url];
 }
 
 - (IBAction)sliderDragged:(id)sender
 {
-    [self.audioPlayer stop];
+    [self.audioPlayer stopAudio];
     [self.audioPlayer setCurrentTime:self.slider.value];
-    [self.audioPlayer prepareToPlay];
-    [self.audioPlayer play];
+    [self.audioPlayer playAudio];
 }
 
 - (void)updateSlider
 {
-    self.slider.value = self.audioPlayer.currentTime;
+    self.slider.value = [self.audioPlayer getCurrentTime];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {

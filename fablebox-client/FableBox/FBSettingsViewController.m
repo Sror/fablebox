@@ -49,6 +49,8 @@
     
     NSString *userId = [defaults valueForKey:APP_USER_ID];
     self.userId.text = userId;
+    NSMutableArray *contentLangs = [defaults valueForKey:APP_CONTENT_LANGS];
+    self.contentLanguages.text = [contentLangs componentsJoinedByString:@","];
 }
 
 - (void)didReceiveMemoryWarning

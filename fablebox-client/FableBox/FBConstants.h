@@ -14,6 +14,7 @@
 #define SERVER_PORT                             @"3001"
 #endif
 
+
 #define DIR_FABLE_AUDIO                         @"fable/audio"
 #define DIR_FABLE_IMAGE_SMALL                   @"fable/image/small"
 #define DIR_FABLE_IMAGE_LARGE                   @"fable/image/large"
@@ -30,15 +31,17 @@
 #define PARAM_APPLE_ID                          @"apple_id"
 #define PARAM_PUSH_TOKEN                        @"push_id"
 
+#define APP_LANG                                @"FBLang"
+#define APP_CONTENT_LANGS                       @"FBContentLangs"
 #define APP_USER_ID                             @"FBUserId"
 #define APP_APPLE_ID                            @"FBAppleId"
 #define APP_PUSH_TOKEN                          @"FBPushToken"
 
 #define BGCOLOR                                 0xD0D5DE
 #define FGCOLOR                                 0x30AEB3
-#define SIDE_VIEW_BG_COLOR                      0x23262B
-#define SIDE_VIEW_ETCH_LIGHT_COLOR              0x292D32
-#define SIDE_VIEW_ETCH_DARK_COLOR               0x1D1B21
+#define SIDE_VIEW_BG_COLOR                      0x454545
+#define SIDE_VIEW_ETCH_LIGHT_COLOR              0x515151
+#define SIDE_VIEW_ETCH_DARK_COLOR               0x393939
 
 @interface FBConstants : NSObject
 

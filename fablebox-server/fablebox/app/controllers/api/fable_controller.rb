@@ -3,7 +3,14 @@ class Api::FableController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def list
-    @fables = Fable.all
+
+    if(params[:lang])
+      selected_langs = params[:lang].split(',')
+    else
+      selected_langs = ['en']
+    end
+
+    @fables = Fable.where("language IN (?)", selected_langs)
     render json: @fables
   end
 

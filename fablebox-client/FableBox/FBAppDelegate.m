@@ -35,6 +35,26 @@
         }
     }
     
+   
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    // check language
+    NSString *lang = [defaults valueForKey:APP_LANG];
+    if (lang == nil)
+    {
+        [defaults setObject:@"English" forKey:APP_LANG];
+        [defaults synchronize];
+    }
+    // check content languages
+    NSArray *contentLangs = [defaults valueForKey:APP_CONTENT_LANGS];
+    if (contentLangs == nil)
+    {
+        NSMutableArray *contentLangs = [NSMutableArray arrayWithArray:@[[FBUtils getLangCode:@"English"]]];
+        [defaults setObject:contentLangs forKey:APP_CONTENT_LANGS];
+        [defaults synchronize];
+    }
+
+    
     // set root controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"FBFablesNavigationController"];

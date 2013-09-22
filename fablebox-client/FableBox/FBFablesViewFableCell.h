@@ -12,5 +12,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *dateAdded;
 @property (nonatomic, weak) IBOutlet UILabel *length;
 @property (nonatomic, weak) IBOutlet UILabel *isPaid;
+@property (nonatomic, weak) IBOutlet UIImageView *imageSmall;
 
 @end

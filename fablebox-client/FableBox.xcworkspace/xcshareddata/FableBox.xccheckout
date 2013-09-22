@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E6A1CA84-3160-49A6-9859-3110DCF55039</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FableBox</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>522AD691-81EE-4DA8-A0C1-C952193483A3</key>
+		<string>https://github.com/halilayyildiz/fablebox.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>fablebox-client/FableBox.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>522AD691-81EE-4DA8-A0C1-C952193483A3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/halilayyildiz/fablebox.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>522AD691-81EE-4DA8-A0C1-C952193483A3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>522AD691-81EE-4DA8-A0C1-C952193483A3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>fablebox</string>
+		</dict>
+	</array>
+</dict>
+</plist>

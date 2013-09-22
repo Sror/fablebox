@@ -11,7 +11,7 @@
 
 @class FBFable;
 
-@interface FBFableDetailViewController : UITableViewController <AVAudioPlayerDelegate>
+@interface FBFableDetailViewController : UIViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) FBFable *fable;
 
@@ -21,10 +21,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *length;
 @property (weak, nonatomic) IBOutlet UILabel *isPaid;
 
-@property (weak, nonatomic) IBOutlet UIButton *togglePlayPause;
+@property (weak, nonatomic) IBOutlet UIButton *togglePlayPauseButton;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel  *duration;
-@property (weak, nonatomic) IBOutlet UILabel  *progressStatus;
+@property (weak, nonatomic) IBOutlet UILabel  *downloadProgressStatus;
+@property (weak, nonatomic) IBOutlet UIProgressView *downloadProgressView;
 
 - (IBAction)togglePlayPauseTapped:(id)sender;
 - (IBAction)sliderDragged:(id)sender;

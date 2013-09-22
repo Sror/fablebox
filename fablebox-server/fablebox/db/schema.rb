@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130915123553) do
+ActiveRecord::Schema.define(version: 20130921201810) do
 
   create_table "fable", force: true do |t|
     t.string   "guid"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130915123553) do
     t.integer  "is_paid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "language"
   end
 
   create_table "purchased_fable", force: true do |t|

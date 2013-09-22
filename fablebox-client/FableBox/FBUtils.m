@@ -48,4 +48,34 @@
     return [formatter dateFromString:dateString];
 }
 
++ (NSString *)getLangCode:(NSString *) language
+{
+    if ([language isEqualToString:@"English"])
+    {
+        return @"EN";
+    }
+    else if ([language isEqualToString:@"Turkish"])
+    {
+        return @"TR";
+    }
+    else if ([language isEqualToString:@"İngilizce"])
+    {
+        return @"EN";
+    }
+    else if ([language isEqualToString:@"Türkçe"])
+    {
+        return @"TR";
+    }
+    else
+    {
+        return @"EN";
+    }
+}
+
++ (int)displayMaxY
+{
+    BOOL hasFourInchDisplay = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
+    return hasFourInchDisplay ? 568 : 480;
+}
+
 @end

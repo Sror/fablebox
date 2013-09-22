@@ -16,5 +16,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 + (NSString*)durationBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime;
 + (NSString*)formatDate:(NSDate*)date;
 + (NSDate *)parseDateTime:(NSString *) dateString;
++ (NSString *)getLangCode:(NSString *) language;
++ (int)displayMaxY;
 
 @end
