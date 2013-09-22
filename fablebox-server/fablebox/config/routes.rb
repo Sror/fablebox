@@ -12,7 +12,7 @@ Fablebox::Application.routes.draw do
   get   'api/fable/list'                         =>    'api/fable#list'
   get   'api/fable/audio/:guid'                  =>    'api/fable#audio'
   get   'api/fable/image/small/:guid'            =>    'api/fable#image_small'
-  get   'api/fable/image.large/:guid'            =>    'api/fable#image_large'
+  get   'api/fable/image/large/:guid'            =>    'api/fable#image_large'
   post  'api/user/register'                      =>    'api/user#register'
   get   'api/user/purchase_fable'                =>    'api/user#purchase'
 

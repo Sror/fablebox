@@ -20,10 +20,6 @@
 @property (strong, nonatomic) FBFableAudioPlayer *audioPlayer;
 @property (strong, nonatomic) NSTimer *sliderTimer;
 
-@property (strong, nonatomic) UIView *imageView;
-@property (strong, nonatomic) UIView *playerView;
-@property (strong, nonatomic) UIView *progressView;
-
 @end
 
 @implementation FBFableDetailViewController
@@ -35,11 +31,9 @@
     
     self.fileManager = [FBFileManager sharedSingleton];
     self.audioPlayer = [FBFableAudioPlayer sharedSingleton];
-    self.imageView = [self.view viewWithTag:100];
-    self.playerView = [self.view viewWithTag:101];
-    self.progressView = [self.view viewWithTag:102];
     
     self.slider.value = 0;
+    self.downloadProgressView.progress = 0;
     [self.togglePlayPauseButton setImage:[UIImage imageNamed:@"fb_player_pause.png"] forState:UIControlStateNormal];
     [self.togglePlayPauseButton setImage:[UIImage imageNamed:@"fb_player_play.png"] forState:UIControlStateSelected];
     [self handleFableAudio];
@@ -51,9 +45,9 @@
     FBAppDelegate *appDelegate = (FBAppDelegate*)[UIApplication sharedApplication].delegate;
     appDelegate.container.panMode = MFSideMenuPanModeNone;
     
-    self.imageView.frame = CGRectMake(20, 84, 280, [FBUtils displayMaxY]-188);
+    self.fableImageView.frame = CGRectMake(20, 84, 280, [FBUtils displayMaxY]-188);
     self.playerView.frame = CGRectMake(20, [FBUtils displayMaxY]-84, 280, 64);
-    self.progressView.frame = CGRectMake(20, [FBUtils displayMaxY]-84, 280, 64);
+    self.downloadingView.frame = CGRectMake(20, [FBUtils displayMaxY]-84, 280, 64);
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -120,7 +114,7 @@
     else
     {
         [self playFableAudio:audioData];
-        [self.progressView setHidden:YES];
+        [self.downloadingView setHidden:YES];
     }
 }
 
@@ -142,7 +136,7 @@
     NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_AUDIO withGuid:self.fable.guid];
     [IADownloadManager downloadItemWithURL:url useCache:NO];
     
-    [IADownloadManager attachListenerWithObject:self
+    [IADownloadManager attachListenerWithObject:self.playerView
         progressBlock:^(float progress, NSURL *url)
         {
             self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
@@ -157,7 +151,7 @@
             {
                 // viewController is visible
                 [self playFableAudio:response];
-                [self.progressView setHidden:YES];
+                [self.downloadingView setHidden:YES];
                 [self.playerView setHidden:NO];
             }
         }
@@ -186,9 +180,42 @@
 
 - (void) handleFableImage
 {
+    NSString *fableGuid = self.fable.guid;
+    UIImage *imageLarge = [self.fileManager loadFableImageLargeWithId:fableGuid];
     
+    if(imageLarge == nil)
+    {
+        [self downloadAndSetFableImage];
+    }
+    else
+    {
+        [self.fableImageView setImage:imageLarge];
+    }
+}
+
+- (void) downloadAndSetFableImage
+{
+    NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_IMAGE_LARGE withGuid:self.fable.guid];
+    [IADownloadManager downloadItemWithURL:url useCache:NO];
     
-    
+    [IADownloadManager attachListenerWithObject:self.fableImageView
+        progressBlock:^(float progress, NSURL *url)
+        {
+//         self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
+//         self.downloadProgressView.progress = progress;
+        }
+        completionBlock:^(BOOL success, id response)
+        {
+            NSLog(@"Fable image large download success.");
+            // save downloaded file, then set imageview
+            [self.fileManager saveFableImageLargeWithId:self.fable.guid downloadedData:response];
+            if (self.isViewLoaded && self.view.window)
+            {
+                // viewController is visible
+                [self.fableImageView setImage:[UIImage imageWithData: response]];
+            }
+        }
+     toURL:url];
 }
 
 

@@ -235,7 +235,7 @@
                                 <rect key="frame" x="20" y="484" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading  32%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u8h-Mx-h7I">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u8h-Mx-h7I">
                                         <rect key="frame" x="20" y="13" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -255,7 +255,10 @@
                     <navigationItem key="navigationItem" title="Fable" id="Idh-77-pL5"/>
                     <connections>
                         <outlet property="downloadProgressStatus" destination="u8h-Mx-h7I" id="tP7-d4-NuS"/>
-                        <outlet property="downloadProgressView" destination="k1j-d9-0iQ" id="pdV-9L-nwa"/>
+                        <outlet property="downloadProgressView" destination="k1j-d9-0iQ" id="di4-oC-L1I"/>
+                        <outlet property="downloadingView" destination="BFa-ss-mbH" id="OkA-Rr-Xkn"/>
+                        <outlet property="fableImageView" destination="kiO-Cm-i5k" id="ksS-P4-evn"/>
+                        <outlet property="playerView" destination="zXd-qq-rle" id="ecT-5o-lOv"/>
                         <outlet property="slider" destination="Xx5-6C-Fn4" id="Csu-Hy-6Bf"/>
                         <outlet property="togglePlayPauseButton" destination="KXy-ZK-GQQ" id="hdX-xh-kmK"/>
                     </connections>
