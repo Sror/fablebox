@@ -175,27 +175,37 @@
 
 - (void) downloadAndSetFableImageToCell:(FBFablesViewFableCell*)cell withGuid:(NSString*)guid
 {
-    NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_IMAGE_SMALL withGuid:guid];
-    [IADownloadManager downloadItemWithURL:url useCache:NO];
+    UIImage *imageSmall = [self.fileManager loadFableImageSmallWithId:guid];
     
-    [IADownloadManager attachListenerWithObject:cell
-        progressBlock:^(float progress, NSURL *url)
-        {
-         //         self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
-         //         self.downloadProgressView.progress = progress;
-        }
-        completionBlock:^(BOOL success, id response)
-        {
-             NSLog(@"Fable small image download success -> %@", guid);
-             // save downloaded file, then set imageview
-             [self.fileManager saveFableImageSmallWithId:guid downloadedData:response];
-             if (self.isViewLoaded && self.view.window)
-             {
-                 // viewController is visible
-                 [cell.imageSmall setImage:[UIImage imageWithData: response]];
-             }
-        }
-        toURL:url];
+    if(imageSmall == nil)
+    {
+        NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_IMAGE_SMALL withGuid:guid];
+        [IADownloadManager downloadItemWithURL:url useCache:NO];
+        
+        [IADownloadManager attachListenerWithObject:cell
+            progressBlock:^(float progress, NSURL *url)
+            {
+             //         self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
+             //         self.downloadProgressView.progress = progress;
+            }
+            completionBlock:^(BOOL success, id response)
+            {
+                 NSLog(@"Fable small image download success -> %@", guid);
+                 // save downloaded file, then set imageview
+                 [self.fileManager saveFableImageSmallWithId:guid downloadedData:response];
+                 if (self.isViewLoaded && self.view.window)
+                 {
+                     // viewController is visible
+                     [cell.imageSmall setImage:[UIImage imageWithData: response]];
+                 }
+            }
+            toURL:url];
+    }
+    else
+    {
+        [cell.imageSmall  setImage:imageSmall];
+    }
+    
 }
 
 @end
