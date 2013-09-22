@@ -206,7 +206,7 @@
         }
         completionBlock:^(BOOL success, id response)
         {
-            NSLog(@"Fable image large download success.");
+            NSLog(@"Fable large image download success -> %@", self.fable.guid);
             // save downloaded file, then set imageview
             [self.fileManager saveFableImageLargeWithId:self.fable.guid downloadedData:response];
             if (self.isViewLoaded && self.view.window)

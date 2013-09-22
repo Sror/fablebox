@@ -6,11 +6,13 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+#import <IADownloadManager.h>
 #import "MFSideMenu.h"
 #import "MBProgressHUD.h"
 #import "FBAppDelegate.h"
 #import "FBFableService.h"
 #import "FBUserService.h"
+#import "FBFileManager.h"
 #import "FBFable.h"
 #import "FBFablesViewController.h"
 #import "FBFablesViewFableCell.h"
@@ -18,9 +20,12 @@
 
 @interface FBFablesViewController ()
 
+@property (strong, nonatomic) FBFileManager *fileManager;
 @property (strong, nonatomic) FBFableService *fableService;
 @property (strong, nonatomic) FBUserService *userService;
+
 -(BOOL)isUserRegistered;
+- (void) downloadAndSetFableImageToCell:(FBFablesViewFableCell*)cell withGuid:(NSString*)guid;
 
 @end
 
@@ -36,6 +41,7 @@
     [super awakeFromNib];
     self.fableService = [[FBFableService alloc] init];
     self.userService = [[FBUserService alloc] init];
+    self.fileManager = [FBFileManager sharedSingleton];
 }
 
 - (void)viewDidLoad
@@ -98,6 +104,8 @@
     [[cell dateAdded] setText:[FBUtils formatDate:fableAtIndex.dateAdded]];
     [[cell length] setText:[fableAtIndex formattedLength]];
     [[cell isPaid] setText:fableAtIndex.isPaid > 0 ? @"PAID" : @"FREE"];
+    // set fable small image
+    [self downloadAndSetFableImageToCell:cell withGuid:fableAtIndex.guid];
     
     return cell;
 }
@@ -163,6 +171,31 @@
             [alert show];
         }
     }];
+}
+
+- (void) downloadAndSetFableImageToCell:(FBFablesViewFableCell*)cell withGuid:(NSString*)guid
+{
+    NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_IMAGE_SMALL withGuid:guid];
+    [IADownloadManager downloadItemWithURL:url useCache:NO];
+    
+    [IADownloadManager attachListenerWithObject:cell
+        progressBlock:^(float progress, NSURL *url)
+        {
+         //         self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
+         //         self.downloadProgressView.progress = progress;
+        }
+        completionBlock:^(BOOL success, id response)
+        {
+             NSLog(@"Fable small image download success -> %@", guid);
+             // save downloaded file, then set imageview
+             [self.fileManager saveFableImageSmallWithId:guid downloadedData:response];
+             if (self.isViewLoaded && self.view.window)
+             {
+                 // viewController is visible
+                 [cell.imageSmall setImage:[UIImage imageWithData: response]];
+             }
+        }
+        toURL:url];
 }
 
 @end

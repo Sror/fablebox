@@ -191,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="-159" y="-482"/>
         </scene>
-        <!--Fable Detail View Controller - Fable-->
+        <!--Fable Detail View Controller - Tale-->
         <scene sceneID="tyB-ro-jRL">
             <objects>
                 <viewController id="Em9-9h-EBS" customClass="FBFableDetailViewController" sceneMemberID="viewController">
@@ -252,7 +252,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Fable" id="Idh-77-pL5"/>
+                    <navigationItem key="navigationItem" title="Tale" id="Idh-77-pL5"/>
                     <connections>
                         <outlet property="downloadProgressStatus" destination="u8h-Mx-h7I" id="tP7-d4-NuS"/>
                         <outlet property="downloadProgressView" destination="k1j-d9-0iQ" id="di4-oC-L1I"/>
@@ -557,6 +557,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fb-menu-icon.png" width="22" height="17"/>
+        <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb_player_play.png" width="64" height="64"/>
         <image name="fb_sidemenu_about.png" width="24" height="24"/>
