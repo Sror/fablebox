@@ -46,18 +46,18 @@ Development Stack
 Screenshots
 -------------------
 
-<p align="left" style="background-color: #DDDDDD;">
-  
-  <span style="border-width:5px; border-color:red;">
-  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png" height="426" width="240" border="2"/>
-  <span/>
-  .
-  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png" height="426" width="240" border="2"/>
-  .
-  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png" height="426" width="240" border="2"/>
-  
-</p>
 
+<p align="left">
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png" height="426" width="240"/>
+  <span/>
+  <span>
+  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png" height="426" width="240"/>
+  <span/>
+  <span>
+  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png" height="426" width="240"/>
+  <span/>
+</p>
 
 
 
