@@ -47,7 +47,11 @@ Screenshots
 -------------------
 
 
+![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png)
 ![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png)
+![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/sidemenu.png)
+![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png)
+
 
 
 
