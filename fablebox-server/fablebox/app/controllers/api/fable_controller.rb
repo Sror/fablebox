@@ -10,7 +10,7 @@ class Api::FableController < ApplicationController
       selected_langs = ['en']
     end
 
-    @fables = Fable.where("language IN (?)", selected_langs)
+    @fables = Fable.where('language IN (?) AND enabled = ?', selected_langs, true).order('date_added DESC')
     render json: @fables
   end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921201810) do
+ActiveRecord::Schema.define(version: 20130926190855) do
 
   create_table "fable", force: true do |t|
     t.string   "guid"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20130921201810) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "language"
+    t.boolean  "enabled"
   end
 
   create_table "purchased_fable", force: true do |t|
