@@ -40,3 +40,21 @@ Development Stack
  - Amazon EC2 Micro Instance (Ubuntu 12.04 LTS)
  - Nginx, Passenger, RVM
  - ..
+ - 
+ 
+
+Screenshots
+-------------------
+
+
+![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png)
+
+
+
+
+
+
+
+
+
+
