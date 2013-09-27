@@ -49,13 +49,13 @@ Screenshots
 
 <p align="left">
   <span>
-    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png" height="426" width="240"/>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png" height="355" width="200"/>
   <span/>
   <span>
-  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png" height="426" width="240"/>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png" height="355" width="200"/>
   <span/>
   <span>
-  <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png" height="426" width="240"/>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png" height="355" width="200"/>
   <span/>
 </p>
 
