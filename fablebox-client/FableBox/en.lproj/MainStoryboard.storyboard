@@ -578,8 +578,6 @@
     </scenes>
     <resources>
         <image name="fb-menu-icon.png" width="22" height="17"/>
-        <image name="fb-menu-icon.png" width="22" height="17"/>
-        <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb_fable_large_image.png" width="260" height="376"/>
         <image name="fb_fable_small_image.png" width="64" height="64"/>
         <image name="fb_player_play.png" width="64" height="64"/>
