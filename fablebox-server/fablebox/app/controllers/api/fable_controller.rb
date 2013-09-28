@@ -4,13 +4,17 @@ class Api::FableController < ApplicationController
 
   def list
 
-    if(params[:lang])
-      selected_langs = params[:lang].split(',')
-    else
-      selected_langs = ['en']
+    query = Fable.where('enabled = ?', true)
+
+    if(params[:langs])
+      query = query.where('language IN (?)', params[:langs].split(','))
     end
 
-    @fables = Fable.where('language IN (?) AND enabled = ?', selected_langs, true).order('date_added DESC')
+    if(params[:no_paids])
+      query = query.where('is_paid = ?', 0)
+    end
+
+    @fables = query.order('date_added DESC')
     render json: @fables
   end
 

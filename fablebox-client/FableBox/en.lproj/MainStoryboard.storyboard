@@ -36,7 +36,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="fb_sidemenu_homepage.png" id="5YN-TT-m2G">
                                                     <rect key="frame" x="20" y="10" width="24" height="24"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Homepage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="svw-lI-r3m">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tales" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="svw-lI-r3m">
                                                     <rect key="frame" x="52" y="10" width="248" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,7 +143,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bXf-3F-3oI">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_fable_small_image.png" id="bXf-3F-3oI">
                                             <rect key="frame" x="20" y="20" width="64" height="64"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -162,11 +162,19 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RBL-oa-Lf4">
+                                            <rect key="frame" x="20" y="39" width="64" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <connections>
                                     <outlet property="imageSmall" destination="bXf-3F-3oI" id="aLY-Y2-7oa"/>
+                                    <outlet property="imageSmallLoadingLabel" destination="RBL-oa-Lf4" id="M6r-Ck-guv"/>
                                     <outlet property="length" destination="var-yG-SUr" id="qEi-px-yZG"/>
                                     <outlet property="name" destination="Ko6-EI-7qn" id="Wsw-WD-7gC"/>
                                     <segue destination="Em9-9h-EBS" kind="push" identifier="showFableDetail" id="trZ-DG-SqK"/>
@@ -179,7 +187,7 @@
                             <outlet property="delegate" destination="RYs-9z-JLi" id="sZc-cg-xOK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Homepage" id="xep-30-fNO">
+                    <navigationItem key="navigationItem" title="Tales" id="xep-30-fNO">
                         <barButtonItem key="leftBarButtonItem" image="fb-menu-icon.png" id="Xrg-Q7-l1N">
                             <connections>
                                 <action selector="showSideMenu:" destination="RYs-9z-JLi" id="Xkb-1s-cX3"/>
@@ -199,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kiO-Cm-i5k">
+                            <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_fable_large_image.png" id="kiO-Cm-i5k">
                                 <rect key="frame" x="20" y="85" width="280" height="288"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -249,6 +257,13 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wzx-2l-Z8c">
+                                <rect key="frame" x="20" y="218" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -257,6 +272,7 @@
                         <outlet property="downloadProgressStatus" destination="u8h-Mx-h7I" id="tP7-d4-NuS"/>
                         <outlet property="downloadProgressView" destination="k1j-d9-0iQ" id="di4-oC-L1I"/>
                         <outlet property="downloadingView" destination="BFa-ss-mbH" id="OkA-Rr-Xkn"/>
+                        <outlet property="fableImageLoadingLabel" destination="Wzx-2l-Z8c" id="or8-JQ-tjE"/>
                         <outlet property="fableImageView" destination="kiO-Cm-i5k" id="ksS-P4-evn"/>
                         <outlet property="playerView" destination="zXd-qq-rle" id="ecT-5o-lOv"/>
                         <outlet property="slider" destination="Xx5-6C-Fn4" id="Csu-Hy-6Bf"/>
@@ -391,6 +407,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contentLanguages" destination="l3o-7L-g6d" id="gWS-S8-zA4"/>
+                        <outlet property="downloadedFableCount" destination="JQN-XF-hWg" id="BOS-tg-BiN"/>
                         <outlet property="userId" destination="qPG-Dr-rzO" id="OPZ-To-JmQ"/>
                     </connections>
                 </tableViewController>
@@ -426,14 +443,14 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="epc-ut-lSQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="epc-ut-lSQ">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="epc-ut-lSQ" id="X7f-CU-3UG">
                                             <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turkish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="oSb-Qx-UNc">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turkish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oSb-Qx-UNc">
                                                     <rect key="frame" x="20" y="11" width="107" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -563,6 +580,8 @@
         <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb-menu-icon.png" width="22" height="17"/>
+        <image name="fb_fable_large_image.png" width="260" height="376"/>
+        <image name="fb_fable_small_image.png" width="64" height="64"/>
         <image name="fb_player_play.png" width="64" height="64"/>
         <image name="fb_sidemenu_about.png" width="24" height="24"/>
         <image name="fb_sidemenu_homepage.png" width="24" height="24"/>

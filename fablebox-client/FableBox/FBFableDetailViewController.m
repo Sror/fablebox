@@ -185,10 +185,12 @@
     
     if(imageLarge == nil)
     {
+        [self.fableImageLoadingLabel setHidden:NO];
         [self downloadAndSetFableImage];
     }
     else
     {
+        [self.fableImageLoadingLabel setHidden:YES];
         [self.fableImageView setImage:imageLarge];
     }
 }
@@ -212,6 +214,7 @@
             if (self.isViewLoaded && self.view.window)
             {
                 // viewController is visible
+                [self.fableImageLoadingLabel setHidden:YES];
                 [self.fableImageView setImage:[UIImage imageWithData: response]];
             }
         }

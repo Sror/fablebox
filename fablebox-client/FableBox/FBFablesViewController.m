@@ -25,7 +25,6 @@
 @property (strong, nonatomic) FBUserService *userService;
 
 -(BOOL)isUserRegistered;
-- (void) downloadAndSetFableImageToCell:(FBFablesViewFableCell*)cell withGuid:(NSString*)guid;
 
 @end
 
@@ -96,16 +95,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"FableCell";
-    
     FBFablesViewFableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     FBFable *fableAtIndex = [self.fableService objectInListAtIndex:indexPath.row];
+    
+    [cell setFable:fableAtIndex];
     [[cell name] setText:fableAtIndex.name];
-    [[cell dateAdded] setText:[FBUtils formatDate:fableAtIndex.dateAdded]];
     [[cell length] setText:[fableAtIndex formattedLength]];
-    [[cell isPaid] setText:fableAtIndex.isPaid > 0 ? @"PAID" : @"FREE"];
     // set fable small image
-    [self downloadAndSetFableImageToCell:cell withGuid:fableAtIndex.guid];
+    [cell downloadAndSetFableImage:self.fileManager];
     
     return cell;
 }
@@ -123,8 +121,10 @@
 
 - (void)refreshViewData
 {
+    self.view.userInteractionEnabled = NO;
     [self.fableService reloadFables:^{
         [self updateTable];
+        self.view.userInteractionEnabled = YES;
     }];
 }
 
@@ -160,7 +160,8 @@
 {    
     [MBProgressHUD showHUDAddedTo:self.tableView  animated:YES];
     
-    [[self userService] registerUser:^(NSString *userId) {
+    [[self userService] registerUser:^(NSString *userId)
+    {
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         
         if (userId == nil)
@@ -171,41 +172,6 @@
             [alert show];
         }
     }];
-}
-
-- (void) downloadAndSetFableImageToCell:(FBFablesViewFableCell*)cell withGuid:(NSString*)guid
-{
-    UIImage *imageSmall = [self.fileManager loadFableImageSmallWithId:guid];
-    
-    if(imageSmall == nil)
-    {
-        NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_IMAGE_SMALL withGuid:guid];
-        [IADownloadManager downloadItemWithURL:url useCache:NO];
-        
-        [IADownloadManager attachListenerWithObject:cell
-            progressBlock:^(float progress, NSURL *url)
-            {
-             //         self.downloadProgressStatus.text = [NSString stringWithFormat:@"Downloading  %.0lf %%", (progress * 100)];
-             //         self.downloadProgressView.progress = progress;
-            }
-            completionBlock:^(BOOL success, id response)
-            {
-                 NSLog(@"Fable small image download success -> %@", guid);
-                 // save downloaded file, then set imageview
-                 [self.fileManager saveFableImageSmallWithId:guid downloadedData:response];
-                 if (self.isViewLoaded && self.view.window)
-                 {
-                     // viewController is visible
-                     [cell.imageSmall setImage:[UIImage imageWithData: response]];
-                 }
-            }
-            toURL:url];
-    }
-    else
-    {
-        [cell.imageSmall  setImage:imageSmall];
-    }
-    
 }
 
 @end

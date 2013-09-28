@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
-
 @interface FBContentLanguageControllerViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *selectedLanguages;

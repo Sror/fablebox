@@ -6,12 +6,17 @@
 //  Copyright (c) 2013 Halil AYYILDIZ. All rights reserved.
 //
 
+@class FBFable;
+
 @interface FBFablesViewFableCell : UITableViewCell
 
+@property (nonatomic, weak) FBFable *fable;
+
 @property (nonatomic, weak) IBOutlet UILabel *name;
-@property (nonatomic, weak) IBOutlet UILabel *dateAdded;
 @property (nonatomic, weak) IBOutlet UILabel *length;
-@property (nonatomic, weak) IBOutlet UILabel *isPaid;
 @property (nonatomic, weak) IBOutlet UIImageView *imageSmall;
+@property (nonatomic, weak) IBOutlet UILabel *imageSmallLoadingLabel;
+
+- (void) downloadAndSetFableImage:(FBFileManager*)fileManager;
 
 @end

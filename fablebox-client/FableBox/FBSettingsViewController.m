@@ -8,6 +8,7 @@
 
 #import "MFSideMenu.h"
 #import "FBAppDelegate.h"
+#import "FBFileManager.h"
 #import "FBSettingsViewController.h"
 
 @interface FBSettingsViewController ()
@@ -51,6 +52,8 @@
     self.userId.text = userId;
     NSMutableArray *contentLangs = [defaults valueForKey:APP_CONTENT_LANGS];
     self.contentLanguages.text = [contentLangs componentsJoinedByString:@","];
+    NSInteger downloadedFableCount = [[FBFileManager sharedSingleton] countOfDownloadedFables];
+    self.downloadedFableCount.text = [NSString stringWithFormat:@"%d", downloadedFableCount];
 }
 
 - (void)didReceiveMemoryWarning

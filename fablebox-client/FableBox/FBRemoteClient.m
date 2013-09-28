@@ -38,11 +38,13 @@
 
 - (void) getFables:(void (^)(NSMutableArray *fables))onCompleteSend
 {
-    // prepare url string
+    // prepare url
     NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@", SERVER_HOSTNAME, SERVER_PORT, API_FABLE_LIST];
-    
     NSURL *url = [NSURL URLWithString:urlStr];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSDictionary *params = @{PARAM_USER_ID: [self getUserId], PARAM_LANGS:[self getContentLangs], PARAM_NO_PAIDS:@"true"};
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:urlStr parameters:params];
     
     AFJSONRequestOperation *operation =
     [AFJSONRequestOperation JSONRequestOperationWithRequest:request
@@ -116,10 +118,21 @@
     return [NSString stringWithFormat:@"%d", userId];
 }
 
+- (NSUserDefaults *)getUserDefaults
+{
+    static NSUserDefaults *defaults;
+
+    if(defaults == nil)
+    {
+        defaults = [NSUserDefaults standardUserDefaults];
+    }
+    
+    return defaults;
+}
+
 - (NSString *)getDeviceToken
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *token = [defaults valueForKey:APP_PUSH_TOKEN];
+    NSString *token = [[self getUserDefaults] valueForKey:APP_PUSH_TOKEN];
     if (token == nil) {
         return @"";
     }
@@ -128,8 +141,25 @@
 
 - (NSString *)getAppleId
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *token = [defaults valueForKey:APP_APPLE_ID];
+    NSString *token = [[self getUserDefaults] valueForKey:APP_APPLE_ID];
+    if (token == nil) {
+        return @"";
+    }
+    return token;
+}
+
+- (NSString *)getUserId
+{
+    NSString *token = [[self getUserDefaults] valueForKey:APP_USER_ID];
+    if (token == nil) {
+        return @"";
+    }
+    return token;
+}
+
+- (NSString *)getContentLangs
+{
+    NSString *token = [[[self getUserDefaults] valueForKey:APP_CONTENT_LANGS] componentsJoinedByString:@","];
     if (token == nil) {
         return @"";
     }

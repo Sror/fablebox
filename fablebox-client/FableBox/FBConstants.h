@@ -30,6 +30,8 @@
 #define PARAM_USER_ID                           @"user_id"
 #define PARAM_APPLE_ID                          @"apple_id"
 #define PARAM_PUSH_TOKEN                        @"push_id"
+#define PARAM_LANGS                             @"langs"
+#define PARAM_NO_PAIDS                          @"no_paids"
 
 #define APP_LANG                                @"FBLang"
 #define APP_CONTENT_LANGS                       @"FBContentLangs"

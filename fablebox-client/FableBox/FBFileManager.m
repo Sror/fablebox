@@ -95,4 +95,13 @@
     return image;
 }
 
+- (NSInteger) countOfDownloadedFables
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *fableAudioPath = [documentsPath stringByAppendingPathComponent:DIR_FABLE_AUDIO];
+
+    NSArray *filelist= [[NSFileManager defaultManager] contentsOfDirectoryAtPath:fableAudioPath error:NULL];
+    return [filelist count];
+}
+
 @end

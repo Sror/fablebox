@@ -10,6 +10,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *userId;
 @property (strong, nonatomic) IBOutlet UILabel *contentLanguages;
+@property (strong, nonatomic) IBOutlet UILabel *downloadedFableCount;
 
 -(IBAction)showSideMenu:(id)sender;
 

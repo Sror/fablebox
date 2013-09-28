@@ -22,9 +22,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *isPaid;
 
 @property (weak, nonatomic) IBOutlet UIImageView *fableImageView;
+@property (weak, nonatomic) IBOutlet UILabel *fableImageLoadingLabel;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UIView *downloadingView;
-
 
 
 @property (weak, nonatomic) IBOutlet UIButton *togglePlayPauseButton;
