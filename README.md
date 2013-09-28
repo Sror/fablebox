@@ -32,25 +32,36 @@ Development Stack
  - Xcode, Objective-C
  - CocoaPods to manage dependencies
  - TestFlight for distributing test application
- - ..
+
 
 - **Server Side**
  - Ruby 2.0.0
  - Ruby on Rails 4.0.0
  - Amazon EC2 Micro Instance (Ubuntu 12.04 LTS)
  - Nginx, Passenger, RVM
- - ..
- - 
+
+
  
 
 Screenshots
 -------------------
 
 
-![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png)
-![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png)
-![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/sidemenu.png)
-![alt tag](https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png)
+<p align="left">
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/homepage.png" height="355" width="200"/>
+  <span/>
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png" height="355" width="200"/>
+  <span/>
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png" height="355" width="200"/>
+  <span/>
+</p>
+
+
+
+
 
 
 
