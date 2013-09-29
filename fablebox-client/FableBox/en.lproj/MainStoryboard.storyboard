@@ -194,6 +194,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="F33-sr-YWq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wk-tc-wkg" sceneMemberID="firstResponder"/>
             </objects>
@@ -577,6 +580,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fb-menu-icon.png" width="22" height="17"/>
+        <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb-menu-icon.png" width="22" height="17"/>
         <image name="fb_fable_large_image.png" width="260" height="376"/>
         <image name="fb_fable_small_image.png" width="64" height="64"/>
