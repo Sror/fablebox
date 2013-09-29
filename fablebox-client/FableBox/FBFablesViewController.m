@@ -34,7 +34,6 @@
 
 @implementation FBFablesViewController
 
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -121,11 +120,14 @@
 
 - (void)refreshViewData
 {
-    self.view.userInteractionEnabled = NO;
-    [self.fableService reloadFables:^{
-        [self updateTable];
-        self.view.userInteractionEnabled = YES;
-    }];
+    if (![[self refreshControl] isRefreshing])
+    {
+        self.view.userInteractionEnabled = NO;
+        [self.fableService reloadFables:^{
+            [self updateTable];
+            self.view.userInteractionEnabled = YES;
+        }];
+    }
 }
 
 - (void)updateTable
