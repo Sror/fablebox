@@ -1,0 +1,107 @@
+
+Tale Box
+-----------------
+
+Kids will enjoy most popular fairy tales and stories playing on your iPhone.
+Each tale is visualized with pictures and can be played as audio. 
+
+
+TALES INCLUDED
+
+- Peter Pan
+- The Ugly Duckling
+- Snow White and The Seven Dwarfs
+- Beauty and the Beast
+- Rapunzel
+- Little Red Riding Hood
+- Cinderella
+- Hansel and Gretel
+- Aladdin and The Magic Lamp
+- Sleeping Beauty
+- The Frog Prince
+- Puss in Boots
+- Little Mermaide	
+- Pied Piper of Hamelin
+
+
+FEATURES
+
+This version is the initial one comprising basic tale listing with images and playing the audio.
+Next versions will contain interactive multiple images for tales, ipad support, multi-language contents etc.
+
+
+Please don't hesitate to send your feedback !
+Contact me for any questions or suggestions at admin@halilayyildiz.com
+
+
+
+-----------------------------------------------------------------------
+
+What's New in Version 1.0
+
+Initial version featuring:
+- Tale listing with images
+- Play/puase tales as audio
+- Visualizing tales with images
+- Once download, play w/o internet
+
+
+-----------------------------------------------------------------------
+
+Small -> 128 x 128
+Large -> 560 x 752
+
+
+(1)	1000100000000001	EN	FREE	Peter Pan
+(2)	1000200000000001	TR	FREE	Peter Pan
+
+(3)	1000100000000002	EN	PAID	The Ugly Duckling
+(4)	1000200000000002	TR	PAID	Çirkin Ördek Yavrusu
+
+(5)	1000100000000003	EN	FREE	Snow White and The Seven Dwarfs
+(6)	1000200000000004	TR	FREE	Pamuk Prenses ve Yedi Cüceler
+
+(7)	1000100000000004	EN	FREE	Beauty and the Beast
+(8)	1000200000000005	TR	FREE	Güzel ve Çirkin
+	
+(9)	1000100000000005	EN	FREE	Rapunzel				
+(10)	1000200000000005	TR	FREE	Rapunzel				
+	
+(11)	1000100000000006	EN	FREE	Little Red Riding Hood
+(12)	1000200000000006	TR	FREE	Kırmızı Başllıklı Kız
+	
+(13)	1000100000000007	EN	PAID	Cinderella
+(14)	1000200000000007	TR	PAID	Kül Kedisi
+	
+(15)	1000100000000008	EN	FREE	Hansel and Gretel
+(16)	1000200000000008	TR	FREE	Hansel and Gretel
+	
+(17)	1000100000000009	EN	PAID	Aladdin and The MAgic Lamp
+(18)	1000200000000009	TR	PAID	Alaaddin'in Sihirli Lambası
+	
+(19)	10001000000000010	EN	FREE	Sleeping Beauty
+(20)	10002000000000010	TR	FREE	Uyuyan Güzel
+		
+(21)	10001000000000011	EN	PAID	The Frog Prince
+(22)	10002000000000011	TR	PAID	Kurbağa Prens
+
+(23)	1000100000000012	EN	FREE	Puss in Boots
+(24)	1000200000000012	TR	FREE	Çizmeli Kedi
+
+(25)	1000100000000013	EN	FREE	Little Mermaide	
+(26)	1000200000000013	TR	FREE	Küçük Deniz Kızı
+
+(27)	1000100000000014	EN	FREE	Pied Piper of Hamelin
+(28)	1000200000000014	TR	FREE	Fareli Köyün Kavalcısı
+
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

@@ -103,19 +103,19 @@
 
 - (void) handleFableAudio
 {
-    NSString *fableGuid = self.fable.guid;
-    NSData *audioData = [self.fileManager loadFableAudioWithId:fableGuid];
-    
-    if(audioData == nil)
-    {
+//    NSString *fableGuid = self.fable.guid;
+//    NSData *audioData = [self.fileManager loadFableAudioWithId:fableGuid];
+//    
+//    if(audioData == nil)
+//    {
         [self downloadAndPlayFableAudio];
         [self.playerView setHidden:YES];
-    }
-    else
-    {
-        [self playFableAudio:audioData];
-        [self.downloadingView setHidden:YES];
-    }
+//    }
+//    else
+//    {
+//        [self playFableAudio:audioData];
+//        [self.downloadingView setHidden:YES];
+//    }
 }
 
 - (void) playFableAudio:(NSData*)audioData
@@ -134,7 +134,7 @@
 - (void) downloadAndPlayFableAudio
 {
     NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_AUDIO withGuid:self.fable.guid];
-    [IADownloadManager downloadItemWithURL:url useCache:NO];
+    [IADownloadManager downloadItemWithURL:url useCache:YES];
     
     [IADownloadManager attachListenerWithObject:self.playerView
         progressBlock:^(float progress, NSURL *url)
@@ -146,7 +146,7 @@
         {
             NSLog(@"Fable audio download success.");
             // save downloaded file, then play
-            [self.fileManager saveFableAudioWithId:self.fable.guid downloadedData:response];
+//            [self.fileManager saveFableAudioWithId:self.fable.guid downloadedData:response];
             if (self.isViewLoaded && self.view.window)
             {
                 // viewController is visible
@@ -180,25 +180,25 @@
 
 - (void) handleFableImage
 {
-    NSString *fableGuid = self.fable.guid;
-    UIImage *imageLarge = [self.fileManager loadFableImageLargeWithId:fableGuid];
-    
-    if(imageLarge == nil)
-    {
+//    NSString *fableGuid = self.fable.guid;
+//    UIImage *imageLarge = [self.fileManager loadFableImageLargeWithId:fableGuid];
+//    
+//    if(imageLarge == nil)
+//    {
         [self.fableImageLoadingLabel setHidden:NO];
         [self downloadAndSetFableImage];
-    }
-    else
-    {
-        [self.fableImageLoadingLabel setHidden:YES];
-        [self.fableImageView setImage:imageLarge];
-    }
+//    }
+//    else
+//    {
+//        [self.fableImageLoadingLabel setHidden:YES];
+//        [self.fableImageView setImage:imageLarge];
+//    }
 }
 
 - (void) downloadAndSetFableImage
 {
     NSURL *url = [self.fileManager getUrlForAPI:API_FABLE_IMAGE_LARGE withGuid:self.fable.guid];
-    [IADownloadManager downloadItemWithURL:url useCache:NO];
+    [IADownloadManager downloadItemWithURL:url useCache:YES];
     
     [IADownloadManager attachListenerWithObject:self.fableImageView
         progressBlock:^(float progress, NSURL *url)
@@ -210,7 +210,7 @@
         {
             NSLog(@"Fable large image download success -> %@", self.fable.guid);
             // save downloaded file, then set imageview
-            [self.fileManager saveFableImageLargeWithId:self.fable.guid downloadedData:response];
+//            [self.fileManager saveFableImageLargeWithId:self.fable.guid downloadedData:response];
             if (self.isViewLoaded && self.view.window)
             {
                 // viewController is visible

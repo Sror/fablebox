@@ -46,13 +46,13 @@
 
 - (void) downloadAndSetFableImage:(FBFileManager*)fileManager;
 {
-    UIImage *imageSmall = [fileManager loadFableImageSmallWithId:self.fable.guid];
+//    UIImage *imageSmall = [fileManager loadFableImageSmallWithId:self.fable.guid];
     
     [self.imageSmallLoadingLabel setHidden:NO];
-    if(imageSmall == nil)
-    {
+//    if(imageSmall == nil)
+//    {
         NSURL *url = [fileManager getUrlForAPI:API_FABLE_IMAGE_SMALL withGuid:self.fable.guid];
-        [IADownloadManager downloadItemWithURL:url useCache:NO];
+        [IADownloadManager downloadItemWithURL:url useCache:YES];
         
         [IADownloadManager attachListenerWithObject:self
          progressBlock:^(float progress, NSURL *url)
@@ -64,21 +64,21 @@
          {
              NSLog(@"Fable small image download success -> %@", self.fable.guid);
              // save downloaded file, then set imageview
-             [fileManager saveFableImageSmallWithId:self.fable.guid downloadedData:response];
+//             [fileManager saveFableImageSmallWithId:self.fable.guid downloadedData:response];
 //             if (self.isViewLoaded && self.view.window)
 //             {
                  // viewController is visible
-                 [self.imageSmallLoadingLabel setHidden:YES];
-                 [self.imageSmall setImage:[UIImage imageWithData: response]];
+             [self.imageSmallLoadingLabel setHidden:YES];
+             [self.imageSmall setImage:[UIImage imageWithData: response]];
 //             }
          }
         toURL:url];
-    }
-    else
-    {
-        [self.imageSmallLoadingLabel setHidden:YES];
-        [self.imageSmall  setImage:imageSmall];
-    }
+//    }
+//    else
+//    {
+//        [self.imageSmallLoadingLabel setHidden:YES];
+//        [self.imageSmall  setImage:imageSmall];
+//    }
     
 }
 
