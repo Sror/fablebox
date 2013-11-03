@@ -6,7 +6,7 @@ Mobile tale application for children basically plays tales as audio
 
 Appstore
 -------------------
-https://itunes.apple.com/us/app/tale-box/id717739891
+https://itunes.apple.com/app/id717739891
 
 Features
 -------------------
