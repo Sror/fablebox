@@ -59,7 +59,19 @@ Screenshots
     <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale.png" height="355" width="200"/>
   <span/>
   <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale2.png" height="355" width="200"/>
+  <span/>
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/tale3.png" height="355" width="200"/>
+  <span/>
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/sidemenu.png" height="355" width="200"/>
+  <span/>
+  <span>
     <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/settings.png" height="355" width="200"/>
+  <span/>
+  <span>
+    <img src="https://raw.github.com/halilayyildiz/fablebox/master/screenshots/about.png" height="355" width="200"/>
   <span/>
 </p>
 
