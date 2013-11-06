@@ -1,7 +1,7 @@
 Tale Box
 ========
 
-Mobile tale application for children basically plays tales as audio
+Mobile application for children basicly plays tales as audio visualizing with related images.
 
 
 Appstore
